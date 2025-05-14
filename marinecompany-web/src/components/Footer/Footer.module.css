@@ -1,67 +1,71 @@
 .footer {
-    background-color: #0a2e52;
-    color: white;
-    padding: 2rem 0 0;
-    margin-top: 2rem;
-  }
-  
+  background-color: #0f5178;
+  color: white;
+  padding: 1rem 0;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footerSection {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.5rem;
+}
+
+.footerHeading {
+  color: #f28c38;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.footerText {
+  line-height: 1.4;
+  font-size: 0.8rem;
+  margin: 0.3rem 0;
+}
+
+.footerLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerLinks li {
+  margin-bottom: 0.3rem;
+}
+
+.footerLinks a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: color 0.3s;
+}
+
+.footerLinks a:hover {
+  color: #f28c38;
+}
+
+@media (max-width: 768px) {
   .footerContainer {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    flex-wrap: wrap;
-    gap: 2rem;
-  }
-  
-  .footerSection {
-    flex: 1;
-    min-width: 200px;
-  }
-  
-  .footerHeading {
-    color: #4fc3f7;
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-  }
-  
-  .footerText {
-    line-height: 1.6;
-    margin: 0.5rem 0;
-  }
-  
-  .footerLinks {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .footerLinks li {
-    margin-bottom: 0.5rem;
-  }
-  
-  .footerLinks a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  .footerLinks a:hover {
-    color: #4fc3f7;
-  }
-  
-  .footerBottom {
+    flex-direction: column;
+    gap: 1rem;
     text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-    background-color: #082340;
-    font-size: 0.9rem;
   }
-  
-  @media (max-width: 768px) {
-    .footerContainer {
-      flex-direction: column;
-      gap: 1.5rem;
-    }
+
+  .footerSection {
+    padding: 0;
   }
+
+  .footerText {
+    text-align: center;
+  }
+}

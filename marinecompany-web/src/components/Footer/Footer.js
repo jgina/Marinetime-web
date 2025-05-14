@@ -6,30 +6,31 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.footerContainer}>
         <div className={styles.footerSection}>
-          <h3 className={styles.footerHeading}>Maritime Services</h3>
-          <p className={styles.footerText}>Providing excellence in maritime solutions since 1995.</p>
+          <h3 className={styles.footerHeading}>MARINE PARTS & DIESEL SERVICES LIMITED</h3>
+          <p className={styles.footerText}>
+            Marine Parts & Diesel Services Limited is a servicing company that deals with provision of all Cummins engine, diesel engines, standardized sound proof generator locally and internationally. We also deals with supplying, purchasing and maintenance of Cummins engines and all parts. We offer range of services to ensure high efficiency and compliance for our client satisfaction.
+          </p>
         </div>
         <div className={styles.footerSection}>
-          <h3 className={styles.footerHeading}>Quick Links</h3>
+          <h3 className={styles.footerHeading}>USEFUL LINKS</h3>
           <ul className={styles.footerLinks}>
             <li><a href="/">Home</a></li>
             <li><a href="/about">About Us</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="/services">Our Services</a></li>
+            <li><a href="/contact">Contact Us</a></li>
           </ul>
         </div>
         <div className={styles.footerSection}>
-          <h3 className={styles.footerHeading}>Contact Info</h3>
+          <h3 className={styles.footerHeading}>CONTACT US</h3>
           <address className={styles.footerText}>
-            123 Ocean Drive<br />
-            Maritime City, MC 12345<br />
-            Phone: (123) 456-7890<br />
-            Email: info@maritime.com
+            Road 1, Plot 3 Odani Green City,<br />
+            Elelenwo, Port Harcourt,<br />
+            Rivers State, Nigeria<br />
+            info@marinepdsvr.com.ng<br />
+            +234 8034608291<br />
+            +234 8056430189
           </address>
         </div>
-      </div>
-      <div className={styles.footerBottom}>
-        <p>&copy; {new Date().getFullYear()} Maritime Services. All rights reserved.</p>
       </div>
     </footer>
   );
