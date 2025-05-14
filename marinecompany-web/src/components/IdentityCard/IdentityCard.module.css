@@ -1,0 +1,25 @@
+.identitySection {
+    background-color: white;
+    padding: 3rem 2rem;
+    margin: 2rem auto;
+    border-radius: 12px;
+    max-width: 900px;
+    max-height: 432px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 1rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #333333;
+    line-height: 1.6;
+  }
+  

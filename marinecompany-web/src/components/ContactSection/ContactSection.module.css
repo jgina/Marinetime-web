@@ -1,0 +1,124 @@
+.contactSection {
+  width: 100%;
+  padding: 2rem 1rem;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  display: flex;
+  justify-content: center;
+}
+
+.centeredContainer {
+  width: 100%;
+  max-width: 1000px;
+  /* margin: 20px 20px; */
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #002f6c;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.contactBlock {
+  margin-bottom: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #002f6c;
+  margin-bottom: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.address {
+  font-style: normal;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.divider {
+  height: 1px;
+  background-color: #ddd;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.contactForm {
+  margin-top: 1.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formGroup {
+  margin-bottom: 1.2rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.formLabel {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #555;
+  text-align: left;
+}
+
+.formInput,
+.formTextarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.formTextarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.subsectionTitle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 0.8rem;
+  text-align: center;
+  width: 100%;
+}
+
+.contactList {
+  list-style: none;
+  padding-left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.contactItem {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .contactSection {
+    padding: 1.5rem 1rem;
+  }
+  
+  .formGroup {
+    max-width: 100%;
+  }
+}

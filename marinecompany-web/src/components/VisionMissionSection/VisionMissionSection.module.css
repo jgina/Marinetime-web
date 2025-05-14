@@ -1,0 +1,54 @@
+.container {
+    background-color: #E6F0FA;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .section {
+    margin-bottom: 40px;
+  }
+  
+  .icon {
+    margin-bottom: 20px;
+  }
+  
+  .heading {
+    color: #003087;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .text {
+    color: #333;
+    font-size: 16px;
+    lineHeight: 1.5;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .clientsSection {
+    margin-top: 40px;
+  }
+  
+  .clientsHeading {
+    color: #003087;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .clientsLogos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .logo {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    padding: 10px;
+  }

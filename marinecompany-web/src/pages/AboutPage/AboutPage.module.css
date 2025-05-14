@@ -1,0 +1,295 @@
+.aboutPage {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+/* Professional Hero Section */
+.heroSection {
+  position: relative;
+  width: 100%;
+  height: 70vh; /* Standard professional height */
+  min-height: 500px; /* Minimum height */
+  max-height: 800px; /* Maximum height */
+  overflow: hidden;
+}
+
+.heroImageContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 47, 108, 0.5); /* Navy blue overlay */
+}
+
+.heroContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroTextContainer {
+  text-align: center;
+  color: white;
+  padding: 0 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive font size */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  line-height: 1.2;
+}
+
+.breadcrumb {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Content Sections */
+.divider {
+  height: 1px;
+  background-color: #ddd;
+  margin: 3rem auto;
+  width: 80%;
+  max-width: 800px;
+}
+
+.contentSection {
+  padding: 0 2rem;
+  margin: 0 auto 3rem;
+  max-width: 800px;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #002f6c;
+  margin-bottom: 1.5rem;
+}
+
+.paragraph {
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* Core Values Section */
+.coreValuesSection {
+  background-color: #e5ecef;
+  padding: 2rem 0;
+}
+
+.coreValuesContent {
+  background-color: #2c5364;
+  color: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.coreValuesHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.coreValuesLogo {
+  margin: 0 auto 1rem;
+}
+
+.coreValuesSubtitle {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #b0c4de;
+}
+
+.coreValuesTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+.coreValuesIntro {
+  color: #b0c4de;
+  margin-top: 1rem;
+}
+
+.valuesList {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.valuesList li {
+  margin-bottom: 1.25rem;
+}
+
+.valuesList li::marker {
+  color: #00c4cc;
+  font-size: 1.5em;
+}
+
+.valueTitle {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+.whyChooseUsSection {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: #083e62;
+  color: white;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+
+.whyChooseUsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  max-height: 290px;
+  margin: 0 auto;
+}
+
+
+.whyText {
+  flex: 1;
+  min-width: 250px;
+  /* max-heigth: 250px; */
+  animation: slideInLeft 1.2s ease-in-out;
+}
+
+.whyText h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.whyText ul {
+  padding-left: 20px;
+}
+
+.whyImage {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  text-align: center;
+  animation: slideInRight 1s ease-in-out;
+}
+
+
+.whyImage img {
+  width: 100%;
+  height: 340px;
+  max-height: 400px;
+  border-radius: 20px;
+  object-fit: contain;
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); */
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.whyImage img:hover {
+  transform: scale(1.03);
+}
+
+
+@media (max-width: 992px) {
+  .heroSection {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    height: 50vh;
+    min-height: 400px;
+  }
+  
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  
+  .contentSection {
+    padding: 0 1.5rem;
+  }
+
+  .coreValuesContent {
+    padding: 1.5rem;
+  }
+  .whyChooseUs {
+    padding: 30px 10px;
+  }
+
+  .whyChooseUs h2 {
+    font-size: 1.6rem;
+  }
+
+  .whyChooseUsContent {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .whyChooseUsImage {
+    width: 200px;
+    height: 200px;
+  }
+
+  .servicesSection {
+    padding: 30px 10px;
+  }
+
+  .servicesSection h2 {
+    font-size: 1.6rem;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .heroSection {
+    height: 45vh;
+    min-height: 350px;
+  }
+  
+  .heroTitle {
+    font-size: 2rem;
+  }
+  
+  .breadcrumb {
+    font-size: 1rem;
+  }
+
+  .coreValuesTitle {
+    font-size: 1.75rem;
+  }
+}
