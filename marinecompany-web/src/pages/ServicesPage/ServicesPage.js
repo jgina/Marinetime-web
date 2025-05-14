@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './ServicesPage.module.css';
-import servicesHero from '../../assets/heroimage1.png';
+import servicesHero from '../../assets/getintouchhero.png';
 // Placeholder images for service sections (replace with actual images)
 import generatorImage from '../../assets/ourservices1.png';
 import sparePartsImage from '../../assets/ourservicespageimage2.png';
