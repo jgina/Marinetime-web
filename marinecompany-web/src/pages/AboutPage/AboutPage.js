@@ -9,7 +9,7 @@ const AboutPage = () => {
   const values = [
     {
       title: "Reliability",
-      description: "We do what we promise. You can count on us to keep your engines running."
+      description: "We deliver what we promise. You can count on us to keep your engines running."
     },
     {
       title: "Expertise",
@@ -21,7 +21,7 @@ const AboutPage = () => {
     },
     {
       title: "Customer Commitment",
-      description: "We put our clients first – offering responsive service, and long-term support that goes beyond the transaction."
+      description: "We put our clients first – offering responsive service, and long-term support that goes beyond a single transaction."
     },
     {
       title: "Quality",
@@ -56,8 +56,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <div className={styles.divider}></div>
-
+      {/* Removed divider */}
       <section className={styles.contentSection}>
         <h2 className={styles.sectionTitle}>Our History</h2>
         <p className={styles.paragraph}>
@@ -68,16 +67,15 @@ const AboutPage = () => {
         </p>
       </section>
 
-      <div className={styles.divider}></div>
-
+      {/* Removed divider */}
       <section className={styles.contentSection}>
         <h2 className={styles.sectionTitle}>Who Are We</h2>
         {/* Content for "Who Are We" would go here */}
       </section>
 
-       <section className={styles.whyChooseUsSection}>
+      <section className={styles.whyChooseUsSection}>
         <div className={styles.whyChooseUsContainer}>
-        <div className={styles.whyImage}>
+          <div className={styles.whyImage}>
             <img src={chooseUsImage} alt="Why Choose Us" />
           </div>
           <div className={styles.whyText}>
@@ -95,28 +93,21 @@ const AboutPage = () => {
               <li>Most of all we care about our customers, and always give them honest and reliable service.</li>
             </ul>
           </div>
-          
         </div>
       </section>
 
       <section>
-          <IdentityCard />
+        <IdentityCard />
       </section>
-      
+
       <section>
         <VisionMissionSection />
       </section>
 
-      <div className={styles.divider}></div>
-
+      {/* Removed divider */}
       <section className={styles.coreValuesSection}>
         <div className={styles.coreValuesContent}>
           <div className={styles.coreValuesHeader}>
-            <img
-              src="https://via.placeholder.com/150x50?text=HydroDive+Marine"
-              alt="HydroDive Marine Logo"
-              className={styles.coreValuesLogo}
-            />
             <h2 className={styles.coreValuesSubtitle}>What Makes Us Different</h2>
             <h1 className={styles.coreValuesTitle}>Our Core Values</h1>
             <p className={styles.coreValuesIntro}>

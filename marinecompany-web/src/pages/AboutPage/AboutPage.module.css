@@ -9,7 +9,7 @@
 .heroSection {
   position: relative;
   width: 100%;
-  height: 70vh; /* Standard professional height */
+  height: 60vh; /* Standard professional height */
   min-height: 500px; /* Minimum height */
   max-height: 800px; /* Maximum height */
   overflow: hidden;
@@ -71,17 +71,13 @@
 
 /* Content Sections */
 .divider {
-  height: 1px;
-  background-color: #ddd;
-  margin: 3rem auto;
-  width: 80%;
-  max-width: 800px;
+  display: none; /* Removed divider to eliminate gaps */
 }
 
 .contentSection {
-  padding: 0 2rem;
-  margin: 0 auto 3rem;
+  padding: 0 2rem 0; /* Removed bottom margin, added padding for internal spacing */
   max-width: 800px;
+  margin: 0 auto;
 }
 
 .sectionTitle {
@@ -89,6 +85,7 @@
   font-weight: 600;
   color: #002f6c;
   margin-bottom: 1.5rem;
+  margin-top: 0; /* Removed top margin to eliminate gap */
 }
 
 .paragraph {
@@ -96,134 +93,150 @@
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
   color: #444;
+  margin-top: 0; /* Removed top margin to eliminate gap */
 }
 
 /* Core Values Section */
 .coreValuesSection {
-  background-color: #e5ecef;
-  padding: 2rem 0;
+  background-color: #e5ecef; /* Changed to match outer light blue */
+  margin-top: 20px; /* Removed padding to align with image */
+  height: 200vh;
+  width: 100%;
 }
 
 .coreValuesContent {
-  background-color: #2c5364;
+  background-color: #2c5364; /* Matches dark blue background */
   color: white;
-  padding: 2.5rem;
-  border-radius: 15px;
-  max-width: 800px;
+  padding: 2rem; /* Adjusted for compactness */
+  border-radius: 15px; /* Matches rounded corners */
+  max-width: 600px;
+  height: vh;
   margin: 0 auto;
+  margin-top: -14.5px; /* Removed top margin to eliminate gap */
+  
 }
 
 .coreValuesHeader {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem; /* Adjusted for compactness */
+  margin-top: 0; /* Removed top margin to eliminate gap */
 }
 
 .coreValuesLogo {
-  margin: 0 auto 1rem;
+  display: none; /* Removed logo as per image */
 }
 
 .coreValuesSubtitle {
-  font-size: 0.875rem;
+  font-size: 0.875rem; /* Matches image */
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: #b0c4de;
+  color: #b0c4de; /* Matches light gray text */
+  margin-bottom: 0.5rem; /* Adjusted spacing */
 }
 
 .coreValuesTitle {
-  font-size: 2.25rem;
+  font-size: 2.25rem; /* Matches image */
   font-weight: 700;
-  margin-top: 0.5rem;
+  margin-top: 0; /* Removed top margin */
+  margin-bottom: 1rem; /* Adjusted spacing */
 }
 
 .coreValuesIntro {
-  color: #b0c4de;
-  margin-top: 1rem;
+  color: #b0c4de; /* Matches light gray text */
+  font-size: 1rem; /* Adjusted for readability */
+  margin-bottom: 1rem; /* Adjusted spacing */
+  margin-top: 0; /* Removed top margin */
 }
 
 .valuesList {
-  list-style: disc;
-  padding-left: 1.5rem;
+  list-style: none; /* Removed default bullets */
+  padding-left: 0; /* Removed padding to match custom bullets */
 }
 
 .valuesList li {
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.75rem; /* Adjusted for compactness */
+  position: relative; /* For custom bullet positioning */
+  padding-left: 1.5rem; /* Space for custom bullet */
 }
 
-.valuesList li::marker {
-  color: #00c4cc;
-  font-size: 1.5em;
+.valuesList li::before {
+  content: "t"; /* Custom bullet from image */
+  color: #00c4cc; /* Matches green bullet color */
+  font-size: 1.2rem; /* Adjusted to match image */
+  position: absolute;
+  left: 0;
+  top: 0.1rem; /* Fine-tuned positioning */
 }
 
 .valueTitle {
   font-weight: 700;
-  font-size: 1.125rem;
-}
-.whyChooseUsSection {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  background-color: #083e62;
-  color: white;
-  padding: 60px 20px;
-  box-sizing: border-box;
+  font-size: 1.125rem; /* Matches image */
 }
 
+.whyChooseUsSection {
+  background-color: #0f5178;
+  color: white;
+  padding: 1rem 0;
+  max-width: 1100px;
+  height: 90vh;
+}
 
 .whyChooseUsContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  width: 100%;
-  max-width: 1200px;
-  max-height: 290px;
+  max-width: 1000px;
   margin: 0 auto;
-}
-
-
-.whyText {
-  flex: 1;
-  min-width: 250px;
-  /* max-heigth: 250px; */
-  animation: slideInLeft 1.2s ease-in-out;
-}
-
-.whyText h2 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-
-.whyText ul {
-  padding-left: 20px;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .whyImage {
   flex: 1;
-  min-width: 300px;
-  max-width: 500px;
-  text-align: center;
-  animation: slideInRight 1s ease-in-out;
+  min-width: 180px;
+  max-height: 75vh;
 }
-
 
 .whyImage img {
   width: 100%;
-  height: 340px;
-  max-height: 400px;
-  border-radius: 20px;
-  object-fit: contain;
-  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); */
-  transition: transform 0.3s ease-in-out;
+  height: 74vh;
+  object-fit: cover;
+  border-radius: 4px;
+  margin: -2px;
 }
 
-
-.whyImage img:hover {
-  transform: scale(1.03);
+.whyText {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.5rem;
 }
 
+.whyText h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: #f28c38;
+}
 
+.whyText p {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
+.whyText ul {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.whyText li {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  margin-bottom: 0.3rem;
+}
+ 
 @media (max-width: 992px) {
   .heroSection {
     height: 60vh;
@@ -235,44 +248,32 @@
     height: 50vh;
     min-height: 400px;
   }
-  
+
   .heroTitle {
     font-size: 2.5rem;
   }
-  
+
   .contentSection {
-    padding: 0 1.5rem;
+    padding: 0 1.5rem 0;
   }
 
   .coreValuesContent {
     padding: 1.5rem;
   }
-  .whyChooseUs {
-    padding: 30px 10px;
+
+  .whyChooseUsSection {
+    padding: 30px 10px 0;
   }
 
-  .whyChooseUs h2 {
-    font-size: 1.6rem;
-  }
-
-  .whyChooseUsContent {
+  .whyChooseUsContainer {
     flex-direction: column;
     gap: 1.5rem;
   }
 
-  .whyChooseUsImage {
+  .whyImage img {
     width: 200px;
     height: 200px;
   }
-
-  .servicesSection {
-    padding: 30px 10px;
-  }
-
-  .servicesSection h2 {
-    font-size: 1.6rem;
-  }
-
 }
 
 @media (max-width: 576px) {
@@ -280,16 +281,39 @@
     height: 45vh;
     min-height: 350px;
   }
-  
+
   .heroTitle {
     font-size: 2rem;
   }
-  
+
   .breadcrumb {
     font-size: 1rem;
   }
 
   .coreValuesTitle {
     font-size: 1.75rem;
+  }
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }

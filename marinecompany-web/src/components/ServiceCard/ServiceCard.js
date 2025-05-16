@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./ServiceCard.module.css";
-import getintouch from "../../assets/getintouch.png";
 import ourservices1 from "../../assets/ourservices1.png";
+import whychooseus from "../../assets/whychooseus.png";
 import ourservices3 from "../../assets/ourservices3.png";
 
 const ServiceCard = () => {
@@ -11,13 +11,13 @@ const ServiceCard = () => {
       <div className={styles.servicesList}>
         <div className={styles.serviceItem}>
           <div className={styles.card}>
-            <img src={getintouch} alt="Maintenance" className={styles.image} />
+            <img src={ourservices1} alt="Maintenance" className={styles.image} />
             <p className={styles.serviceText}>Maintenance and Repair all Cummins Engines</p>
           </div>
         </div>
         <div className={styles.serviceItem}>
           <div className={styles.card}>
-            <img src={ourservices1} alt="Quality Services" className={styles.image} />
+            <img src={whychooseus} alt="Quality Services" className={styles.image} />
             <p className={styles.serviceText}>Provision of Quality Services & Materials</p>
           </div>
         </div>

@@ -10,32 +10,38 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      if (location.pathname === '/') {
+        setIsScrolled(window.scrollY > 50);
+      } else {
+        setIsScrolled(true);
+      }
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [location]);
 
   useEffect(() => {
-    // Set header state based on the current page
     if (location.pathname !== '/') {
-      setIsScrolled(true); // Retain scrolled state on non-home pages
+      setIsScrolled(true);
     } else {
-      setIsScrolled(window.scrollY > 50); // Reset to scroll-based state on home page
+      setIsScrolled(window.scrollY > 50);
     }
   }, [location]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    if (location.pathname === '/' && !isScrolled) {
+      setIsScrolled(true);
+    }
   };
 
   const handleLinkClick = (to) => {
     if (to !== '/') {
-      setIsScrolled(true); // Set scrolled state for non-home pages
+      setIsScrolled(true);
     } else {
-      setIsScrolled(false); // Reset to unscrolled state for home page
+      setIsScrolled(window.scrollY > 50);
     }
-    setIsMenuOpen(false); // Close menu on link click
+    setIsMenuOpen(false);
   };
 
   return (
@@ -50,18 +56,42 @@ const Header = () => {
           </button>
           <ul className={`${styles.navList} ${isMenuOpen ? styles.navListOpen : ''}`}>
             <li className={styles.navItem}>
-              <Link to="/" className={styles.navLink} onClick={() => handleLinkClick('/')}>Home</Link>
+              <Link
+                to="/"
+                className={`${styles.navLink} ${location.pathname === '/' ? styles.active : ''}`}
+                onClick={() => handleLinkClick('/')}
+              >
+                Home
+              </Link>
             </li>
             <li className={styles.navItem}>
-              <Link to="/about" className={styles.navLink} onClick={() => handleLinkClick('/about')}>About Us</Link>
+              <Link
+                to="/about"
+                className={`${styles.navLink} ${location.pathname === '/about' ? styles.active : ''}`}
+                onClick={() => handleLinkClick('/about')}
+              >
+                About Us
+              </Link>
             </li>
             <li className={styles.navItem}>
-              <Link to="/services" className={styles.navLink} onClick={() => handleLinkClick('/services')}>Our Services</Link>
+              <Link
+                to="/services"
+                className={`${styles.navLink} ${location.pathname === '/services' ? styles.active : ''}`}
+                onClick={() => handleLinkClick('/services')}
+              >
+                Our Services
+              </Link>
             </li>
           </ul>
         </nav>
         <div className={styles.buttonContainer}>
-          <Link to="/contact" className={styles.navLinkButton} onClick={() => handleLinkClick('/contact')}>Get in touch</Link>
+          <Link
+            to="/contact"
+            className={`${styles.navLinkButton} ${location.pathname === '/contact' ? styles.active : ''}`}
+            onClick={() => handleLinkClick('/contact')}
+          >
+            Get in touch
+          </Link>
         </div>
       </div>
     </header>

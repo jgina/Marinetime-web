@@ -6,7 +6,7 @@ import servicesHero from '../../assets/getintouchhero.png';
 import generatorImage from '../../assets/ourservices1.png';
 import sparePartsImage from '../../assets/ourservicespageimage2.png';
 import vesselImage from '../../assets/ourservices3.png';
-import materialsImage from '../../assets/getintouch.png';
+import materialsImage from '../../assets/whychooseus.png';
 import maintenanceImage from '../../assets/ourservicespageimage5.png';
 import supplyImage from '../../assets/ourservicespageimage6.png';
 import offshoreImage from '../../assets/ourservicespageimage7.png';
