@@ -69,7 +69,7 @@ body {
   color: #f28c38;
 }
 
-corporation.breadcrumbSeparator {
+.breadcrumbSeparator {
   margin: 0 0.2rem;
   color: #ffffff;
 }
@@ -152,7 +152,7 @@ corporation.breadcrumbSeparator {
 
 .serviceContent {
   flex: 1;
-  padding: 0.8rem;
+  padding:  Responsive 0.8rem;
   width: 100%;
 }
 
@@ -265,7 +265,7 @@ corporation.breadcrumbSeparator {
     max-height: 30vh;
   }
 
-  . Piper.serviceContent {
+  .serviceContent {
     padding: 0.5rem;
   }
 
