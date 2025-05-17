@@ -1,6 +1,11 @@
+/* Reset default body margins */
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .aboutPage {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%; /* Full viewport width */
   font-family: 'Arial', sans-serif;
   color: #333;
 }
@@ -9,9 +14,9 @@
 .heroSection {
   position: relative;
   width: 100%;
-  height: 60vh; /* Standard professional height */
-  min-height: 500px; /* Minimum height */
-  max-height: 800px; /* Maximum height */
+  height: 60vh;
+  min-height: 500px;
+  max-height: 800px;
   overflow: hidden;
 }
 
@@ -51,12 +56,13 @@
   text-align: center;
   color: white;
   padding: 0 2rem;
-  max-width: 800px;
+  width: 100%;
+  max-width: 800px; /* Constrain text for readability */
   margin: 0 auto;
 }
 
 .heroTitle {
-  font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive font size */
+  font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 700;
   margin-bottom: 1rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -75,8 +81,8 @@
 }
 
 .contentSection {
-  padding: 0 2rem 0; /* Removed bottom margin, added padding for internal spacing */
-  max-width: 800px;
+  padding: 0 2rem 0;
+  width: 100%; /* Full width */
   margin: 0 auto;
 }
 
@@ -85,7 +91,10 @@
   font-weight: 600;
   color: #002f6c;
   margin-bottom: 1.5rem;
-  margin-top: 0; /* Removed top margin to eliminate gap */
+  margin-top: 0;
+  max-width: 800px; /* Center text for readability */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .paragraph {
@@ -93,96 +102,105 @@
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
   color: #444;
-  margin-top: 0; /* Removed top margin to eliminate gap */
+  margin-top: 0;
+  max-width: 800px; /* Center text for readability */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Core Values Section */
 .coreValuesSection {
-  background-color: #e5ecef; /* Changed to match outer light blue */
-  margin-top: 20px; /* Removed padding to align with image */
-  height: 200vh;
+  background-color: #e5ecef;
+  margin-top: 20px;
   width: 100%;
 }
 
 .coreValuesContent {
-  background-color: #2c5364; /* Matches dark blue background */
+  background-color: #2c5364;
   color: white;
-  padding: 2rem; /* Adjusted for compactness */
-  border-radius: 15px; /* Matches rounded corners */
-  max-width: 600px;
-  height: vh;
+  padding: 2rem;
+  border-radius: 15px;
+  width: 100%;
   margin: 0 auto;
-  margin-top: -14.5px; /* Removed top margin to eliminate gap */
-  
+  margin-top: -14.5px;
 }
 
 .coreValuesHeader {
   text-align: center;
-  margin-bottom: 1.5rem; /* Adjusted for compactness */
-  margin-top: 0; /* Removed top margin to eliminate gap */
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+  max-width: 600px; /* Center text for readability */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .coreValuesLogo {
-  display: none; /* Removed logo as per image */
+  display: none;
 }
 
 .coreValuesSubtitle {
-  font-size: 0.875rem; /* Matches image */
+  font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: #b0c4de; /* Matches light gray text */
-  margin-bottom: 0.5rem; /* Adjusted spacing */
+  color: #b0c4de;
+  margin-bottom: 0.5rem;
 }
 
 .coreValuesTitle {
-  font-size: 2.25rem; /* Matches image */
+  font-size: 2.25rem;
   font-weight: 700;
-  margin-top: 0; /* Removed top margin */
-  margin-bottom: 1rem; /* Adjusted spacing */
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 .coreValuesIntro {
-  color: #b0c4de; /* Matches light gray text */
-  font-size: 1rem; /* Adjusted for readability */
-  margin-bottom: 1rem; /* Adjusted spacing */
-  margin-top: 0; /* Removed top margin */
+  color: #b0c4de;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
 }
 
 .valuesList {
-  list-style: none; /* Removed default bullets */
-  padding-left: 0; /* Removed padding to match custom bullets */
+  list-style: none;
+  padding-left: 0;
+  width: 100%;
+  max-width: 600px; /* Center list for readability */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .valuesList li {
-  margin-bottom: 0.75rem; /* Adjusted for compactness */
-  position: relative; /* For custom bullet positioning */
-  padding-left: 1.5rem; /* Space for custom bullet */
+  margin-bottom: 0.75rem;
+  position: relative;
+  padding-left: 1.5rem;
+  width: 100%;
 }
 
 .valuesList li::before {
-  content: "t"; /* Custom bullet from image */
-  color: #00c4cc; /* Matches green bullet color */
-  font-size: 1.2rem; /* Adjusted to match image */
+  content: "t";
+  color: #00c4cc;
+  font-size: 1.2rem;
   position: absolute;
   left: 0;
-  top: 0.1rem; /* Fine-tuned positioning */
+  top: 0.1rem;
 }
 
 .valueTitle {
   font-weight: 700;
-  font-size: 1.125rem; /* Matches image */
+  font-size: 1.125rem;
 }
 
+/* Why Choose Us Section */
 .whyChooseUsSection {
   background-color: #0f5178;
   color: white;
   padding: 1rem 0;
-  max-width: 1100px;
-  height: 90vh;
+  width: 100%;
+  height: auto; /* Adjust height for content */
 }
 
 .whyChooseUsContainer {
-  max-width: 1000px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 1rem;
   display: flex;
@@ -194,12 +212,13 @@
 .whyImage {
   flex: 1;
   min-width: 180px;
-  max-height: 75vh;
+  width: 100%;
 }
 
 .whyImage img {
   width: 100%;
-  height: 74vh;
+  height: auto;
+  max-height: 75vh;
   object-fit: cover;
   border-radius: 4px;
   margin: -2px;
@@ -209,6 +228,10 @@
   flex: 1;
   min-width: 200px;
   padding: 0.5rem;
+  width: 100%;
+  max-width: 600px; /* Center text for readability */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .whyText h2 {
@@ -229,17 +252,68 @@
   list-style-type: disc;
   padding-left: 1.2rem;
   margin: 0;
+  width: 100%;
 }
 
 .whyText li {
   font-size: 0.8rem;
   line-height: 1.4;
   margin-bottom: 0.3rem;
+  width: 100%;
 }
- 
+
+/* Responsive Design */
+@media (max-width: 1280px) {
+  .aboutPage {
+    max-width: 100%; /* Allow full width */
+  }
+
+  .contentSection {
+    max-width: 100%;
+    padding: 0 1.5rem 0;
+  }
+
+  .coreValuesSection {
+    max-width: 100%;
+  }
+
+  .coreValuesContent {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+
+  .whyChooseUsSection {
+    max-width: 100%;
+  }
+
+  .whyChooseUsContainer {
+    max-width: 95%;
+    padding: 0 1rem;
+  }
+}
+
 @media (max-width: 992px) {
   .heroSection {
     height: 60vh;
+  }
+
+  .contentSection {
+    padding: 0 1.5rem 0;
+    max-width: 100%;
+  }
+
+  .coreValuesContent {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+
+  .whyChooseUsSection {
+    height: auto;
+  }
+
+  .whyImage img {
+    height: auto;
+    max-height: 60vh;
   }
 }
 
@@ -254,25 +328,62 @@
   }
 
   .contentSection {
-    padding: 0 1.5rem 0;
+    padding: 0 1rem 0;
+    max-width: 100%;
+  }
+
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+
+  .paragraph {
+    font-size: 1rem;
   }
 
   .coreValuesContent {
-    padding: 1.5rem;
+    max-width: 85%;
+    padding: 1rem;
+  }
+
+  .coreValuesTitle {
+    font-size: 2rem;
   }
 
   .whyChooseUsSection {
-    padding: 30px 10px 0;
+    padding: 20px 10px 0;
   }
 
   .whyChooseUsContainer {
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .whyImage {
+    width: 100%;
+    max-height: 50vh;
   }
 
   .whyImage img {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
+  }
+
+  .whyText {
+    padding: 0.3rem;
+  }
+
+  .whyText h2 {
+    font-size: 1rem;
+  }
+
+  .whyText p {
+    font-size: 0.7rem;
+  }
+
+  .whyText li {
+    font-size: 0.7rem;
   }
 }
 
@@ -290,8 +401,154 @@
     font-size: 1rem;
   }
 
+  .contentSection {
+    padding: 0 0.5rem 0;
+    max-width: 100%;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+
+  .paragraph {
+    font-size: 0.9rem;
+  }
+
+  .coreValuesContent {
+    max-width: 90%;
+    padding: 0.8rem;
+  }
+
   .coreValuesTitle {
     font-size: 1.75rem;
+  }
+
+  .coreValuesSubtitle {
+    font-size: 0.75rem;
+  }
+
+  .valuesList li {
+    padding-left: 1rem;
+  }
+
+  .valuesList li::before {
+    font-size: 1rem;
+    top: 0;
+  }
+
+  .valueTitle {
+    font-size: 1rem;
+  }
+
+  .whyChooseUsSection {
+    padding: 15px 5px 0;
+  }
+
+  .whyChooseUsContainer {
+    padding: 0 0.3rem;
+  }
+
+  .whyImage {
+    max-height: 40vh;
+  }
+
+  .whyImage img {
+    height: auto;
+    max-height: 40vh;
+  }
+
+  .whyText h2 {
+    font-size: 0.9rem;
+  }
+
+  .whyText p {
+    font-size: 0.65rem;
+  }
+
+  .whyText li {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection {
+    height: 40vh;
+    min-height: 300px;
+  }
+
+  .heroTitle {
+    font-size: 1.8rem;
+  }
+
+  .breadcrumb {
+    font-size: 0.9rem;
+  }
+
+  .contentSection {
+    padding: 0 0.3rem 0;
+    max-width: 100%;
+  }
+
+  .sectionTitle {
+    font-size: 1.3rem;
+  }
+
+  .paragraph {
+    font-size: 0.85rem;
+  }
+
+  .coreValuesContent {
+    max-width: 95%;
+    padding: 0.5rem;
+  }
+
+  .coreValuesTitle {
+    font-size: 1.5rem;
+  }
+
+  .coreValuesSubtitle {
+    font-size: 0.7rem;
+  }
+
+  .valuesList li {
+    padding-left: 0.8rem;
+  }
+
+  .valuesList li::before {
+    font-size: 0.9rem;
+  }
+
+  .valueTitle {
+    font-size: 0.9rem;
+  }
+
+  .whyChooseUsSection {
+    padding: 10px 3px 0;
+  }
+
+  .whyChooseUsContainer {
+    padding: 0 0.2rem;
+  }
+
+  .whyImage {
+    max-height: 30vh;
+  }
+
+  .whyImage img {
+    height: auto;
+    max-height: 30vh;
+  }
+
+  .whyText h2 {
+    font-size: 0.8rem;
+  }
+
+  .whyText p {
+    font-size: 0.6rem;
+  }
+
+  .whyText li {
+    font-size: 0.6rem;
   }
 }
 
