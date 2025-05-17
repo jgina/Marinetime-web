@@ -138,14 +138,14 @@ body {
 
 .serviceImage {
   flex: 1;
-  max-width: 30%; /* Reduced from 40% to make images smaller */
-  max-height: 30vh; /* Constrain image height */
+  max-width: 35%; /* Increased from 30% to make images slightly larger */
+  max-height: 35vh; /* Slightly increased from 30vh for balance */
 }
 
 .serviceImage img {
   width: 100%;
   height: auto;
-  max-height: 30vh; /* Ensure images don't grow too tall */
+  max-height: 35vh; /* Match container height */
   border-radius: 4px;
   object-fit: cover;
 }
@@ -249,11 +249,11 @@ body {
 
   .serviceImage {
     max-width: 100%; /* Full width on smaller screens */
-    max-height: 25vh; /* Further reduce height */
+    max-height: 30vh; /* Slightly reduced for mobile */
   }
 
   .serviceImage img {
-    max-height: 25vh;
+    max-height: 30vh;
   }
 
   .serviceContent {
@@ -297,7 +297,7 @@ body {
   }
 
   .serviceImage img {
-    max-height: 20vh;
+    max-height: 25vh;
   }
 
   .serviceTitle {
@@ -338,7 +338,7 @@ body {
   }
 
   .serviceImage img {
-    max-height: 15vh;
+    max-height: 20vh;
   }
 
   .serviceTitle {
