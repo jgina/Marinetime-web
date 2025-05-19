@@ -16,38 +16,25 @@ const Header = () => {
         setIsScrolled(true);
       }
     };
+
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [location]);
 
-  useEffect(() => {
-    if (location.pathname !== '/') {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(window.scrollY > 50);
-    }
-  }, [location]);
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-    if (location.pathname === '/' && !isScrolled) {
-      setIsScrolled(true);
-    }
-  };
-
-  const handleLinkClick = (to) => {
-    if (to !== '/') {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(window.scrollY > 50);
-    }
-    setIsMenuOpen(false);
-  };
+  const navLinks = [
+    { path: '/', label: 'Home' },
+    { path: '/about', label: 'About Us' },
+    { path: '/services', label: 'Our Services' }
+  ];
 
   return (
-    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
+    <header className={`${styles.header} ${isScrolled ? styles.scrolled : styles.original}`}>
       <div className={styles.headerContainer}>
-        <Link to="/" className={styles.logoLink} onClick={() => handleLinkClick('/')}>
+        <Link to="/" className={styles.logoLink} onClick={closeMenu}>
           <img src={logo} alt="Maritime Logo" className={styles.logo} />
         </Link>
         <nav className={styles.nav}>
@@ -55,40 +42,37 @@ const Header = () => {
             <span className={styles.hamburgerIcon}>{isMenuOpen ? '✕' : '☰'}</span>
           </button>
           <ul className={`${styles.navList} ${isMenuOpen ? styles.navListOpen : ''}`}>
-            <li className={styles.navItem}>
+            {navLinks.map(({ path, label }) => (
+              <li key={path} className={styles.navItem}>
+                <Link
+                  to={path}
+                  className={`${styles.navLink} ${location.pathname === path ? styles.active : ''}`}
+                  onClick={closeMenu}
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
+
+            {/* Show this only on mobile menu */}
+            <li className={`${styles.navItem} ${styles.mobileOnly}`}>
               <Link
-                to="/"
-                className={`${styles.navLink} ${location.pathname === '/' ? styles.active : ''}`}
-                onClick={() => handleLinkClick('/')}
+                to="/contact"
+                className={`${styles.navLink} ${location.pathname === '/contact' ? styles.active : ''}`}
+                onClick={closeMenu}
               >
-                Home
-              </Link>
-            </li>
-            <li className={styles.navItem}>
-              <Link
-                to="/about"
-                className={`${styles.navLink} ${location.pathname === '/about' ? styles.active : ''}`}
-                onClick={() => handleLinkClick('/about')}
-              >
-                About Us
-              </Link>
-            </li>
-            <li className={styles.navItem}>
-              <Link
-                to="/services"
-                className={`${styles.navLink} ${location.pathname === '/services' ? styles.active : ''}`}
-                onClick={() => handleLinkClick('/services')}
-              >
-                Our Services
+                Get in touch
               </Link>
             </li>
           </ul>
         </nav>
+
+        {/* Get in touch button for large screens */}
         <div className={styles.buttonContainer}>
           <Link
             to="/contact"
             className={`${styles.navLinkButton} ${location.pathname === '/contact' ? styles.active : ''}`}
-            onClick={() => handleLinkClick('/contact')}
+            onClick={closeMenu}
           >
             Get in touch
           </Link>

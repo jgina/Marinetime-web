@@ -1,21 +1,27 @@
 .header {
-  position: absolute; /* Sit inside hero section on home page */
+  position: absolute;
   width: 100%;
   top: 0;
   z-index: 1000;
-  transition:  opacity 0.3s ease, position 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
   padding: 1rem 0;
- 
-  box-shadow: none;
-  /* Inherit hero section background */
-  opacity: 1;
+}
+
+.original {
+  background-color: white;
+}
+
+.original .navLink {
+  color: #f28c38;
+}
+
+.original .hamburgerIcon {
+  color: #f28c38;
 }
 
 .scrolled {
-  position: fixed; /* Switch to fixed when scrolled or on other pages */
-  background-color: #0F5179; /* Solid blue on scroll or non-home pages */
-  background-image: none; /* Remove hero background when scrolled */
-  opacity: 1;
+  position: fixed;
+  background-color: #0F5179;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
@@ -48,7 +54,7 @@
 .navList {
   display: flex;
   list-style: none;
-  gap: 1.5rem;
+  gap: 1rem;
   margin: 0;
   padding: 0;
 }
@@ -59,19 +65,19 @@
 }
 
 .navLink {
-  color: white;
   text-decoration: none;
   font-weight: 500;
   font-size: 1.1rem;
   transition: color 0.3s ease;
   padding: 0.5rem 0;
+  color: white;
 }
 
 .navLink:hover {
   color: #4fc3f7;
 }
 
-.navLink.active {
+.active {
   color: #f28c38;
   border-bottom: 2px solid #f28c38;
 }
@@ -115,11 +121,12 @@
   color: white;
 }
 
-@media (max-width: 768px) {
-  .headerContainer {
-    padding: 1rem;
-  }
+/* Only show this list item on mobile */
+.mobileOnly {
+  display: none;
+}
 
+@media (max-width: 768px) {
   .nav {
     justify-content: flex-end;
   }
@@ -146,7 +153,11 @@
   }
 
   .navItem {
-    margin: 0.75rem 0;
+    margin: 0.5rem 0;
+  }
+
+  .buttonContainer {
+    display: none;
   }
 
   .navLinkButton {
@@ -155,12 +166,12 @@
     margin: 0.5rem 0;
   }
 
-  .buttonContainer {
-    display: none;
-  }
-
-  .navLink.active {
+  .active {
     border-bottom: none;
     color: #f28c38;
+  }
+
+  .mobileOnly {
+    display: flex;
   }
 }
