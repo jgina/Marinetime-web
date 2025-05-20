@@ -1,106 +1,228 @@
 .serviceSection {
-    width: 100%;
-    height: auto;
-    background-color: ;
-    padding: 4rem 8rem;
-    
+  width: 100%;
+  min-height: auto; /* Changed from height: auto for consistency */
+  background-color: #f7fafc; /* Added fallback background color */
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 5vw, 6rem); /* Responsive padding */
+  box-sizing: border-box; /* Prevent padding overflow */
+}
+
+.title {
+  font-size: clamp(1.6rem, 4vw, 2.4rem); /* Responsive font size */
+  color: #002f6c;
+  margin-bottom: clamp(1rem, 3vw, 2rem);
+  text-align: center;
+}
+
+.servicesList {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(1.5rem, 4vw, 3rem); /* Responsive gap */
+}
+
+.serviceItem {
+  flex: 1;
+  min-width: clamp(180px, 40vw, 250px); /* Adjusted for smaller screens */
+  max-width: clamp(250px, 30vw, 350px); /* Flexible max-width */
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding-bottom: 1rem;
+  min-height: clamp(300px, 50vw, 360px); /* Replaced fixed height */
+  width: 100%; /* Full width within .serviceItem */
+  max-width: 350px; /* Cap width for larger screens */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.imagecontainer {
+  width: 100%;
+  height: clamp(200px, 40vw, 300px); /* Responsive height */
+  overflow: hidden; /* Prevent image overflow */
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; /* Remove any inline spacing */
+}
+
+.serviceText {
+  font-size: clamp(0.75rem, 2vw, 0.9rem); /* Responsive font size */
+  color: #555;
+  text-align: center;
+  line-height: 1.4;
+  margin: 0 clamp(0.5rem, 2vw, 1rem); /* Responsive margin */
+}
+
+.seeMoreBtn {
+  margin-top: clamp(1.5rem, 3vw, 2rem);
+  padding: clamp(0.5rem, 2vw, 0.75rem) clamp(1rem, 3vw, 1.5rem);
+  background-color: transparent;
+  color: #002f6c;
+  border: 1px solid #002f6c;
+  border-radius: 40px;
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: block;
+  margin: 2rem auto 0; /* Simplified margin */
+  min-width: 120px; /* Ensure touch target size */
+}
+
+.seeMoreBtn:hover {
+  background-color: #002f6c;
+  color: white;
+}
+
+/* Responsive Design */
+
+/* Large screens (1440px and above) */
+@media (min-width: 1440px) {
+  .serviceSection {
+    padding: clamp(3rem, 4vw, 5rem) clamp(2rem, 6vw, 8rem);
   }
-  
-  .title {
-    font-size: 2.2rem;
-    color: #002f6c;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-  
+
   .servicesList {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
     gap: 4rem;
   }
-  
+
   .serviceItem {
-    flex: 1;
-    min-width: 200px;
-    max-width: 300px;
+    min-width: 250px;
+    max-width: 400px;
   }
-  
+
   .card {
-    background-color: #fff;
-    border-radius: 8px;
-    padding-bottom: 1rem;
-    height: 400px;
-    width: 320px;
-    display: flex;
+    max-width: 400px;
+    min-height: 400px;
+  }
+
+  .imagecontainer {
+    height: 320px;
+  }
+}
+
+/* Tablets (768px - 1023px) */
+@media (max-width: 1023px) {
+  .serviceSection {
+    padding: clamp(1.5rem, 4vw, 3rem) clamp(0.8rem, 3vw, 2rem);
+  }
+
+  .title {
+    font-size: clamp(1.4rem, 3.5vw, 2rem);
+  }
+
+  .servicesList {
+    gap: 2rem;
+  }
+
+  .serviceItem {
+    min-width: 200px;
+    max-width: 90%;
+  }
+
+  .card {
+    min-height: 320px;
+  }
+
+  .imagecontainer {
+    height: clamp(180px, 35vw, 260px);
+  }
+}
+
+/* Mobile devices (480px - 767px) */
+@media (max-width: 767px) {
+  .serviceSection {
+    padding: clamp(1rem, 3vw, 2rem) clamp(0.5rem, 2vw, 1rem);
+  }
+
+  .servicesList {
     flex-direction: column;
-    gap: 1rem;
     align-items: center;
-    margin-top: 0;
-    padding-top: 0;
-    justify-content: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1rem;
+    gap: 1.5rem;
   }
-  
-  .imagecontainer { 
-    width: 320px;
-    height: 380px;
 
-  }
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  }
-  
-  .image {
+  .serviceItem {
     width: 100%;
-    height: 100%;
-  
-    object-fit: cover;
+    max-width: 95%;
+    min-width: 0; /* Allow full flexibility */
   }
-  
+
+  .card {
+    min-height: clamp(280px, 50vw, 320px);
+    max-width: 100%;
+    padding-bottom: 0.8rem;
+  }
+
+  .imagecontainer {
+    height: clamp(160px, 40vw, 220px);
+  }
+
   .serviceText {
-    font-size: 0.85rem;
-    color: #555;
-    text-align: center;
-    line-height: 1.4;
-    margin: 0;
+    font-size: clamp(0.7rem, 1.8vw, 0.85rem);
   }
-  
+
   .seeMoreBtn {
-    margin-top: 2rem;
-    padding: 0.75rem 1.5rem;
-    background-color: transparent;
-    color: #002f6c;;
-    border: 1px solid #002f6c;
-    border-radius: 40px;
-    font-size: 1rem;
-    align-items:;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: block;
-    margin: 0 auto;
-    margin-top: 48px;
+    padding: 0.5rem 1rem;
+    font-size: clamp(0.75rem, 1.8vw, 0.9rem);
+  }
 
+  .card:hover {
+    transform: none; /* Disable hover effects on mobile */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+}
 
+/* Small mobile devices (below 480px) */
+@media (max-width: 479px) {
+  .serviceSection {
+    padding: clamp(0.8rem, 2.5vw, 1.5rem) 0.5rem;
   }
-  
-  .seeMoreBtn:hover {
-    background-color: #002f6c;
-    color: white;
+
+  .title {
+    font-size: clamp(1.2rem, 3.5vw, 1.8rem);
   }
-  
-  @media (max-width: 768px) {
-    .servicesList {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .serviceItem {
-      width: 100%;
-      max-width: 350px;
-    }
+
+  .servicesList {
+    gap: 1rem;
   }
+
+  .serviceItem {
+    max-width: 100%;
+  }
+
+  .card {
+    min-height: clamp(240px, 45vw, 280px);
+    padding: 0.5rem;
+  }
+
+  .imagecontainer {
+    height: clamp(140px, 35vw, 180px);
+  }
+
+  .serviceText {
+    font-size: clamp(0.65rem, 1.8vw, 0.8rem);
+    margin: 0 0.5rem;
+  }
+
+  .seeMoreBtn {
+    margin-top: 1rem;
+    padding: 0.4rem 0.8rem;
+    min-width: 100px;
+  }
+}
