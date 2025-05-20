@@ -40,7 +40,7 @@
 }
 
 .logo {
-  height: 50px;
+  height: 64px;
   width: auto;
 }
 
@@ -54,14 +54,16 @@
 .navList {
   display: flex;
   list-style: none;
-  gap: 1rem;
+  gap: 3rem;
   margin: 0;
   padding: 0;
+  
 }
 
 .navItem {
   display: flex;
   align-items: center;
+  
 }
 
 .navLink {
@@ -71,6 +73,7 @@
   transition: color 0.3s ease;
   padding: 0.5rem 0;
   color: white;
+  font-weight: 600;
 }
 
 .navLink:hover {
@@ -97,6 +100,11 @@
   border-radius: 27px;
   transition: background-color 0.3s ease, transform 0.2s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navLinkButton:scrolled {
+  border: 1px solid white;
+  color: white;
 }
 
 .navLinkButton:hover {

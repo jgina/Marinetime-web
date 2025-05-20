@@ -81,9 +81,9 @@ body {
 }
 
 .contentSection {
-  padding: 0 2rem 0;
+  padding-top: 64px;
   width: 100%; /* Full width */
-  margin: 0 auto;
+  margin: 10px;
 }
 
 .sectionTitle {
@@ -106,6 +106,7 @@ body {
   max-width: 800px; /* Center text for readability */
   margin-left: auto;
   margin-right: auto;
+  
 }
 
 /* Core Values Section */

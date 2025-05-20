@@ -31,7 +31,7 @@ const HomePage = () => {
             marine, industrial, and commercial clients worldwide.
           </p>
           <div className={styles.heroButtons}>
-            <button className={styles.heroButton}>Explore Our Services</button>
+            <button className={styles.heroButton1}>Explore Our Services</button>
             <button className={styles.heroButton}>Contact Our Team</button>
           </div>
         </div>
@@ -59,7 +59,7 @@ const HomePage = () => {
             <img src={chooseUsImage} alt="Why Choose Us" />
           </div>
           <div className={styles.whyText}>
-            <h2>Why Choose Us?</h2>
+            <h1>Why Choose Us?</h1>
             <p>
               At Marine Parts and Diesel Service Limited, we know how important it
               is to keep your engines running smoothly.
@@ -76,7 +76,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className={styles.serviceSection}>
+      <section>
         <ServiceCard
           image={bourbonelogo}
           title="Maintenance and Repair all Cummins Engines"

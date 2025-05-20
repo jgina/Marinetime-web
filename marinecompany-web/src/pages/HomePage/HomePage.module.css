@@ -51,14 +51,26 @@ body {
 
 .heroButton {
   margin: 10px;
-  padding: 10px 20px;
+  padding: 14px 20px;
   background-color: #f7931e;
-  border: none;
-  border-radius: 27px;
+  border: 1px solid #f7931e;
+  border-radius: 28px;
   color: white;
   font-weight: bold;
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.heroButton1 {
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  margin: 36px;
+  padding: 14px 20px;
+  border-radius: 28px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+
 }
 
 .heroButton:hover {
@@ -113,6 +125,7 @@ body {
 .whyChooseUsSection {
   background-color: #0f5178;
   color: white;
+  height: 400px;
   padding: 1rem 0;
   width: 100%; /* Full width */
   animation: fadeIn 1s ease-out; /* Fade-in animation */
@@ -132,14 +145,13 @@ body {
 .whyImage {
   flex: 1;
   min-width: 180px;
-  max-height: 75vh;
+  max-height: 100%;
   animation: slideInRight 1s ease-out; /* Slide-in animation */
 }
 
 .whyImage img {
   width: 100%;
-  height: auto;
-  max-height: 74vh;
+  max-height: 48vh;
   object-fit: cover;
   border-radius: 4px;
   margin: -2px;
@@ -152,17 +164,17 @@ body {
   animation: slideInLeft 1s ease-out; /* Slide-in animation */
 }
 
-.whyText h2 {
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  font-weight: 700;
-  margin-bottom: 0.5rem;
+.whyText h1 {
+  font-size: clamp(2.2rem, 2vw, 1.2rem);
+  font-weight: 600;
+  margin-bottom: 1.2rem;
   text-transform: uppercase;
   color: #f28c38;
 }
 
 .whyText p {
-  font-size: clamp(0.7rem, 1.5vw, 0.8rem);
-  line-height: 1.4;
+  font-size: clamp(1.1rem, 1.5vw, 0.8rem);
+  line-height: 1.6;
   margin-bottom: 0.5rem;
 }
 

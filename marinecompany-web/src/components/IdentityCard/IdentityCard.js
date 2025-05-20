@@ -4,6 +4,7 @@ import styles from "./IdentityCard.module.css";
 const IdentityCard = () => {
   return (
     <section className={styles.identitySection}>
+      <p className={styles.identity1}>>> Who are we</p>
       <p className={styles.heading}>
         Your Trusted Partner in all Marine Parts , <br></br>Cummins engines & diesel engines
       </p>

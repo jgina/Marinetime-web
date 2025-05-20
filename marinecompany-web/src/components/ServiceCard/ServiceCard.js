@@ -17,8 +17,8 @@ const ServiceCard = () => {
         </div>
         <div className={styles.serviceItem}>
           <div className={styles.card}>
-            <img src={whychooseus} alt="Quality Services" className={styles.image} />
-            <p className={styles.serviceText}>Provision of Quality Services & Materials</p>
+           <div className={styles.imagecontainer}> <img src={whychooseus} alt="Quality Services" className={styles.image} /> </div>
+             <div className={styles.pcont} ><p className={styles.serviceText}>Provision of Quality Services & Materials</p></div>
           </div>
         </div>
         <div className={styles.serviceItem}>

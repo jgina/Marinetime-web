@@ -1,17 +1,16 @@
 .serviceSection {
-    padding: 3rem 2rem;
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    max-width: 1440px;
-    margin: 2rem auto;
-    text-align: center;
+    width: 100%;
+    height: auto;
+    background-color: ;
+    padding: 4rem 8rem;
+    
   }
   
   .title {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: #002f6c;
     margin-bottom: 2rem;
+    text-align: center;
   }
   
   .servicesList {
@@ -19,7 +18,7 @@
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 4rem;
   }
   
   .serviceItem {
@@ -31,26 +30,36 @@
   .card {
     background-color: #fff;
     border-radius: 8px;
-    padding: 1.5rem;
-    height: 100%;
+    padding-bottom: 1rem;
+    height: 400px;
+    width: 320px;
     display: flex;
     flex-direction: column;
+    gap: 1rem;
     align-items: center;
+    margin-top: 0;
+    padding-top: 0;
     justify-content: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1rem;
   }
   
+  .imagecontainer { 
+    width: 320px;
+    height: 380px;
+
+  }
   .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   }
   
   .image {
-    width: 144px;
-    height: 155px;
-    object-fit: contain;
-    margin-bottom: 1rem;
+    width: 100%;
+    height: 100%;
+  
+    object-fit: cover;
   }
   
   .serviceText {
@@ -64,17 +73,24 @@
   .seeMoreBtn {
     margin-top: 2rem;
     padding: 0.75rem 1.5rem;
-    background-color: #002f6c;
-    color: white;
-    border: none;
-    border-radius: 6px;
+    background-color: transparent;
+    color: #002f6c;;
+    border: 1px solid #002f6c;
+    border-radius: 40px;
     font-size: 1rem;
+    align-items:;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto;
+    margin-top: 48px;
+
+
   }
   
   .seeMoreBtn:hover {
-    background-color: #004494;
+    background-color: #002f6c;
+    color: white;
   }
   
   @media (max-width: 768px) {
