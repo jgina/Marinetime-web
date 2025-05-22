@@ -67,10 +67,8 @@ const AboutPage = () => {
         </p>
       </section>
 
-      {/* Removed divider */}
-      <section className={styles.contentSection}>
-        <h2 className={styles.sectionTitle}>Who Are We</h2>
-        {/* Content for "Who Are We" would go here */}
+       <section>
+        <IdentityCard />
       </section>
 
       <section className={styles.whyChooseUsSection}>
@@ -97,14 +95,9 @@ const AboutPage = () => {
       </section>
 
       <section>
-        <IdentityCard />
-      </section>
-
-      <section>
         <VisionMissionSection />
       </section>
-
-      {/* Removed divider */}
+ 
       <section className={styles.coreValuesSection}>
         <div className={styles.coreValuesContent}>
           <div className={styles.coreValuesHeader}>

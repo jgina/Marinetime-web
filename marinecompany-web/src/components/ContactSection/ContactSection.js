@@ -61,22 +61,22 @@ const ContactSection = () => {
         <div className={styles.contactBlock}>
           <h2 className={styles.sectionTitle}>Head Office</h2>
           <address className={styles.address}>
-            Read Us and Coordinate City,
-            <br />
-            Diamond, New York
-            <br />
-            Everett 3000, Nigeria
-            <br />
-            <br />
-            +234 8234463333
-            <br />
-            +234 8448 640819
+             Road 1, Plot 3 Odani Green City,
+             <br></br>
+           Elelenwo, Port Harcourt,
+           <br></br>
+           Rivers State, Nigeria.
+           <br></br>
+           <br></br>
+           +234 8034608291
+           <br></br>
+           +234 8056430189
           </address>
         </div>
 
-        <div className={styles.divider}></div>
+        {/* <div className={styles.divider}></div> */}
 
-        <div className={styles.contactBlock}>
+        <div className={styles.contactBlock1}>
           <h2 className={styles.sectionTitle}>Send Us Message</h2>
 
           <form className={styles.contactForm} onSubmit={handleSubmit}>
@@ -160,7 +160,7 @@ const ContactSection = () => {
 
         <div className={styles.divider}></div>
 
-        <div className={styles.contactBlock}>
+        {/* <div className={styles.contactBlock}>
           <h3 className={styles.subsectionTitle}>Name Name</h3>
           <ul className={styles.contactList}>
             <li className={styles.contactItem}>
@@ -173,7 +173,7 @@ const ContactSection = () => {
               <strong>Contact Us</strong>
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </section>
   );

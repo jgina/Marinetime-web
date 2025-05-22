@@ -11,7 +11,7 @@ const Footer = () => {
             Marine Parts & Diesel Services Limited is a servicing company that deals with provision of all Cummins engine, diesel engines, standardized sound proof generator locally and internationally. We also deals with supplying, purchasing and maintenance of Cummins engines and all parts. We offer range of services to ensure high efficiency and compliance for our client satisfaction.
           </p>
         </div>
-        <div className={styles.footerSection}>
+        <div className={styles.footerSection2}>
           <h3 className={styles.footerHeading}>USEFUL LINKS</h3>
           <ul className={styles.footerLinks}>
             <li><a href="/">Home</a></li>
@@ -20,7 +20,7 @@ const Footer = () => {
             <li><a href="/contact">Contact Us</a></li>
           </ul>
         </div>
-        <div className={styles.footerSection}>
+        <div className={styles.footerSection3}>
           <h3 className={styles.footerHeading}>CONTACT US</h3>
           <address className={styles.footerText}>
             Road 1, Plot 3 Odani Green City,<br />

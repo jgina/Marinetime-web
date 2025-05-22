@@ -16,20 +16,20 @@ const VisionMissionSection = () => {
         <div className={styles.icon}>
           <span role="img" aria-label="vision-symbol">🌟</span>
         </div>
-        <h2 className={styles.heading}>Our Vision</h2>
-        <p className={styles.text}>
-          To be the leading service provider of Cummins diesel engine spare parts locally and internationally.
+        <h2 className={styles.headingVision}>Our Vision</h2>
+        <p className={styles.textvision}>
+         "To be African leading service provider of Cummins & diesel engine specialist and suppliers of original parts locally and internationally."
         </p>
       </section>
 
       {/* Mission Section */}
-      <section className={styles.section}>
+      <section className={styles.section2}>
         <div className={styles.icon}>
           <span role="img" aria-label="mission-target">🎯</span>
         </div>
-        <h2 className={styles.heading}>Our Mission</h2>
-        <p className={styles.text}>
-          To prominently carry out efficient service for all stakeholders in all that regards Cummins engines, diesel engines & all sound proof generators.
+        <h2 className={styles.headingMission}>Our Mission</h2>
+        <p className={styles.textmission}>
+          "To passionately carryout efficient service for all stake holders in all that regards Cummins engines, diesel engines and all sound proof generators."
         </p>
       </section>
 

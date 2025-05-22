@@ -31,7 +31,7 @@
   background-color: #fff;
   border-radius: 8px;
   padding-bottom: 1rem;
-  min-height: 360px; /* Reduced from 400px for flexibility */
+  height: 400px; /* Reduced from 400px for flexibility */
   width: 100%; /* Use full width of .serviceItem */
   max-width: 320px; /* Match laptop width */
   display: flex;
@@ -51,7 +51,7 @@
 .imagecontainer {
   width: 100%;
   max-width: 320px; /* Match card width */
-  height: clamp(200px, 50vw, 360px); /* Responsive height, reduced from 380px */
+  height: 380px; /* Responsive height, reduced from 380px */
   overflow: hidden; /* Prevent image overflow */
 }
 

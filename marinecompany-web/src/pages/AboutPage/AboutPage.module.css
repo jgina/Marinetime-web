@@ -81,9 +81,11 @@ body {
 }
 
 .contentSection {
-  padding-top: 64px;
-  width: 100%; /* Full width */
-  margin: 10px;
+    width: 100%;
+    height: auto;
+    padding: 4rem 8rem;
+    background-color: #F7FAFC;
+   
 }
 
 .sectionTitle {
@@ -92,9 +94,7 @@ body {
   color: #002f6c;
   margin-bottom: 1.5rem;
   margin-top: 0;
-  max-width: 800px; /* Center text for readability */
-  margin-left: auto;
-  margin-right: auto;
+   
 }
 
 .paragraph {
@@ -103,17 +103,17 @@ body {
   font-size: 1.1rem;
   color: #444;
   margin-top: 0;
-  max-width: 800px; /* Center text for readability */
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%; /* Center text for readability */
+  
   
 }
 
 /* Core Values Section */
 .coreValuesSection {
-  background-color: #e5ecef;
-  margin-top: 20px;
+  background-color:  #F7FAFC;
+  padding: 4rem 8rem;
   width: 100%;
+  margin-top: 0;
 }
 
 .coreValuesContent {
@@ -121,7 +121,7 @@ body {
   color: white;
   padding: 2rem;
   border-radius: 15px;
-  width: 100%;
+  width: 70%;
   margin: 0 auto;
   margin-top: -14.5px;
 }
@@ -192,60 +192,59 @@ body {
 }
 
 /* Why Choose Us Section */
+/* Why Choose Us Section */
 .whyChooseUsSection {
   background-color: #0f5178;
   color: white;
-  padding: 1rem 0;
+  min-height: 300px; /* Changed from fixed height to min-height */
+  padding: 2rem 1rem;
   width: 100%;
-  height: auto; /* Adjust height for content */
+  animation: fadeIn 1s ease-out;
 }
 
 .whyChooseUsContainer {
-  width: 100%;
+  max-width: 95vw;
   margin: 0 auto;
   padding: 0 1rem;
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 2.2rem;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .whyImage {
   flex: 1;
-  min-width: 180px;
-  width: 100%;
+  min-width: 150px; /* Adjusted for smaller screens */
+  max-height: 100%;
+  animation: slideInRight 1s ease-out;
 }
 
 .whyImage img {
   width: 100%;
-  height: auto;
-  max-height: 75vh;
+  max-height: 50vh;
   object-fit: cover;
   border-radius: 4px;
-  margin: -2px;
 }
 
 .whyText {
   flex: 1;
-  min-width: 200px;
+  min-width: 150px;
   padding: 0.5rem;
-  width: 100%;
-  max-width: 600px; /* Center text for readability */
-  margin-left: auto;
-  margin-right: auto;
+  animation: slideInLeft 1s ease-out;
 }
 
-.whyText h2 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
+.whyText h1 {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-weight: 600;
+  margin-bottom: 1rem;
   text-transform: uppercase;
   color: #f28c38;
 }
 
 .whyText p {
-  font-size: 0.8rem;
-  line-height: 1.4;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  line-height: 1.6;
   margin-bottom: 0.5rem;
 }
 
@@ -253,14 +252,12 @@ body {
   list-style-type: disc;
   padding-left: 1.2rem;
   margin: 0;
-  width: 100%;
 }
 
 .whyText li {
-  font-size: 0.8rem;
+  font-size: clamp(0.7rem, 1.5vw, 0.9rem);
   line-height: 1.4;
   margin-bottom: 0.3rem;
-  width: 100%;
 }
 
 /* Responsive Design */
