@@ -1,4 +1,5 @@
-/* Reset default body margins */
+/* ContactPage.module.css */
+
 body {
   margin: 0;
   padding: 0;
@@ -6,10 +7,9 @@ body {
 
 .contactPage {
   padding-top: 0;
-  width: 100%; /* Full viewport width */
+  width: 100%;
 }
 
-/* Hero Section */
 .heroSection {
   height: 60vh;
   min-height: 400px;
@@ -21,8 +21,8 @@ body {
   justify-content: center;
   position: relative;
   margin-top: 0;
-  width: 100%; /* Full width */
-  animation: fadeIn 1s ease-out; /* Fade-in animation */
+  width: 100%;
+  animation: fadeIn 1s ease-out;
 }
 
 .heroSection::before {
@@ -41,7 +41,7 @@ body {
   z-index: 1;
   padding: 0 1rem;
   width: 100%;
-  max-width: 800px; /* Constrain text for readability */
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -81,47 +81,56 @@ body {
   font-weight: 500;
 }
 
-/* Content Section */
 .contentSection {
-  padding: 3rem 0;
+  padding: 4rem 8rem;
   background-color: #0F5179;
-  width: 100%; /* Full width */
-  animation: slideInUp 1s ease-out; /* Slide-in animation */
+  width: 100%;
+  height: auto;
+  animation: slideInUp 1s ease-out;
 }
 
 .contentContainer {
-  width: 100%; /* Full width */
-  max-width: 1000px; /* Constrain text for readability */
-  margin: 0 auto;
+  width: 100%;
   padding: 0 1rem;
-  text-align: center;
+}
+
+.sectionTitlecontainer {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.svgimgcontact {
+  margin-bottom: 1rem;
+  max-width: 100%;
+  height: auto;
 }
 
 .sectionTitle {
-  color: #003087;
-  font-size: clamp(1.5rem, 3vw, 1.8rem);
-  font-weight: 700;
+  color: white;
+  font-size: clamp(0.5rem, 3vw, 1.8rem);
+  font-weight: 500;
   margin-bottom: 1rem;
 }
 
 .sectionText {
-  color: #333;
+  color: whitesmoke;
   font-size: clamp(0.8rem, 2vw, 1rem);
   line-height: 1.6;
   margin-bottom: 1.5rem;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+.sectionText1 {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 /* Animations */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes slideInUp {
@@ -135,17 +144,8 @@ body {
   }
 }
 
-/* Responsive Design */
+/* Responsive Breakpoints (as before, unchanged) */
 @media (max-width: 1280px) {
-  .contactPage {
-    max-width: 100%; /* Allow full width */
-  }
-
-  .heroSection {
-    height: 50vh;
-    min-height: 350px;
-  }
-
   .contentSection {
     padding: 2.5rem 0;
   }
@@ -156,15 +156,6 @@ body {
 }
 
 @media (max-width: 992px) {
-  .heroSection {
-    height: 45vh;
-    min-height: 320px;
-  }
-
-  .heroTitle {
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
-  }
-
   .contentSection {
     padding: 2rem 0;
   }
@@ -175,84 +166,63 @@ body {
 }
 
 @media (max-width: 768px) {
-  .heroSection {
-    height: 40vh;
-    min-height: 300px;
-  }
-
-  .heroTitle {
-    font-size: clamp(1.5rem, 4vw, 2rem);
-  }
-
-  .breadcrumb {
-    font-size: clamp(0.7rem, 1.5vw, 0.9rem);
-  }
-
   .contentSection {
-    padding: 2rem 0;
+    padding: 2rem 1rem;
   }
-
-  .sectionTitle {
-    font-size: clamp(1.2rem, 2.5vw, 1.4rem);
-  }
-
+ 
   .sectionText {
-    font-size: clamp(0.7rem, 1.5vw, 0.9rem);
-  }
+  color: whitesmoke;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.sectionText1 {
+  color: white;
+  font-size: 1rem;
+  font-weight: 800;
+}
 }
 
 @media (max-width: 576px) {
-  .heroSection {
-    height: 35vh;
-    min-height: 280px;
+.contentSection {
+    padding: 1.5rem 1rem;
   }
 
-  .heroTitle {
-    font-size: clamp(1.2rem, 3.5vw, 1.8rem);
-  }
 
-  .breadcrumb {
-    font-size: clamp(0.6rem, 1.5vw, 0.8rem);
-  }
+.sectionText {
+  color: whitesmoke;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
 
-  .contentSection {
-    padding: 1.5rem 0;
-  }
-
-  .sectionTitle {
-    font-size: clamp(1rem, 2vw, 1.2rem);
-  }
-
-  .sectionText {
-    font-size: clamp(0.6rem, 1.5vw, 0.8rem);
-  }
+.sectionText1 {
+  color: white;
+  font-size: 1rem;
+  font-weight: 800;
+}
 }
 
 @media (max-width: 480px) {
-  .heroSection {
-    height: 30vh;
-    min-height: 250px;
-    padding: 2rem 0;
-  }
-
-  .heroTitle {
-    font-size: clamp(1rem, 3vw, 1.5rem);
-  }
-
-  .breadcrumb {
-    font-size: clamp(0.5rem, 1.5vw, 0.7rem);
-  }
-
   .contentSection {
-    padding: 1rem 0;
+    padding: 1rem 1rem;
   }
 
-  .sectionTitle {
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
-  }
-
+  
   .sectionText {
-    font-size: clamp(0.55rem, 1.5vw, 0.75rem);
-    margin-bottom: 1rem;
-  }
+  color: whitesmoke;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.sectionText1 {
+  color: white;
+  font-size: 1rem;
+  font-weight: 800;
+}
 }

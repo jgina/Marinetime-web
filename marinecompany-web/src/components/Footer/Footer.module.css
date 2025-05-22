@@ -85,3 +85,44 @@
     text-align: center;
   }
 }
+
+@media (max-width: 600px) {
+  .footerContainer {
+    padding: 2rem 1rem;
+  }
+
+  .footerSection,
+  .footerSection2,
+  .footerSection3 {
+    min-width: 100%;
+    padding: 1rem 0;
+  }
+
+  .footerHeading,
+  .footerText,
+  .footerLinks {
+    text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer {
+    padding: 1rem 0.5rem;
+  }
+
+  .footerContainer {
+    padding: 1rem 0.5rem;
+  }
+
+  .footerLinks a {
+    font-size: 0.75rem;
+  }
+
+  .footerHeading {
+    font-size: 0.9rem;
+  }
+
+  .footerText {
+    font-size: 0.9rem;
+  }
+}

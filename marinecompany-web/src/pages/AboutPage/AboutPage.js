@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./AboutPage.module.css";
 import aboutHero from "../../assets/about1.png"; // Your hero image
+import doublearrow from "../../assets/doublearrow.svg"; 
+import pointericon from "../../assets/pointericon.svg";
 import VisionMissionSection from "../../components/VisionMissionSection/VisionMissionSection";
 import IdentityCard from "../../components/IdentityCard/IdentityCard";
 import chooseUsImage from "../../assets/whychooseus.png";
@@ -101,19 +103,42 @@ const AboutPage = () => {
       <section className={styles.coreValuesSection}>
         <div className={styles.coreValuesContent}>
           <div className={styles.coreValuesHeader}>
-            <h2 className={styles.coreValuesSubtitle}>What Makes Us Different</h2>
-            <h1 className={styles.coreValuesTitle}>Our Core Values</h1>
+            <div className={styles.coreValuesHeader1}>
+              <img 
+            src={doublearrow} 
+            alt="doublearrow" 
+            className={styles.svgimg}
+          />
+          <h2 className={styles.coreValuesSubtitle}> What Makes Us Different </h2>
+            </div>
+            
+           <div className={styles.coreValuesTitlecontainer}>
+             <h1 className={styles.coreValuesTitle}>Our Core Values</h1>
             <p className={styles.coreValuesIntro}>
               At Marine Parts and Diesel Services Limited, our success comes from staying true to the values that guide how we work every day, which are:
             </p>
-          </div>
-          <ul className={styles.valuesList}>
+
+             <div className={styles.valuesListcontainer}>
+              <ul className={styles.valuesList}>
             {values.map((value, index) => (
+              
               <li key={index}>
+                <img 
+            src={pointericon} 
+            alt="pointericon" 
+            className={styles.svgpointerimg}
+          />
+          
                 <span className={styles.valueTitle}>{value.title}:</span> {value.description}
               </li>
             ))}
           </ul>
+             </div>
+           </div>
+          </div>
+          
+          
+         
         </div>
       </section>
     </div>

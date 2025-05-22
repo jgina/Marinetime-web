@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './ContactPage.module.css';
 import contactHero from '../../assets/getintouchhero.png';
 import ContactSection from '../../components/ContactSection/ContactSection';
+import doublearrow from "../../assets/doublearrow.svg";
 
 const ContactPage = () => {
   return (
@@ -20,9 +21,16 @@ const ContactPage = () => {
 
       <section className={styles.contentSection}>
         <div className={styles.contentContainer}>
-          <h2 className={styles.sectionTitle}>>> Get In Touch With Us</h2>
+          <div className={styles.sectionTitlecontainer}>
+            <img 
+                      src={doublearrow} 
+                      alt="doublearrow" 
+                      className={styles.svgimgcontact}
+                    />
+            <h2 className={styles.sectionTitle}> Get In Touch With Us</h2>
+          </div>
           <p className={styles.sectionText}>
-            Contact us today to discuss how Marine Parts & Diesel Services Limited can be of help to you.
+            Contact us today to discuss how <span className={styles.sectionText1}>Marine Parts & Diesel Services Limited</span> can be of help to you.
           </p>
         </div>
       </section>

@@ -203,6 +203,9 @@
   .serviceText {
     font-size: clamp(0.7rem, 1.5vw, 0.8rem);
   }
+  .pcont {
+    width: 50%;
+  }
 }
 
 /* Small mobile devices (below 480px) */
@@ -236,5 +239,8 @@
     padding: 0.5rem 1rem;
     font-size: clamp(0.7rem, 1.5vw, 0.85rem);
     min-width: 100px;
+  }
+  .pcont {
+    width: 50%;
   }
 }

@@ -81,8 +81,9 @@ body {
 
 /* Content Section */
 .contentSection {
-  padding: 1.5rem 0;
+  padding: 4rem 8rem;
   width: 100%;
+  margin-bottom: 4rem;
   background-color: #ffffff;
 }
 
@@ -92,40 +93,41 @@ body {
   padding: 0 0.8rem;
 }
 
+.sectionTitlecontainer {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  color: #333333;
+}
+
+.svgimagesp {
+  margin-bottom: 2rem;
+}
+
 .sectionTitle {
-  color: #003087;
+  color: #333333;
   font-size: clamp(1rem, 2vw, 1.2rem);
   font-weight: 700;
-  margin-bottom: 0.8rem;
+  margin-bottom: 2rem;
   text-transform: uppercase;
-  text-align: center;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .sectionText {
   color: #333;
-  font-size: clamp(0.7rem, 1vw, 0.8rem);
+  font-size: clamp(1rem, 1.1vw, 1.8rem);
   line-height: 1.4;
   margin-bottom: 1rem;
-  text-align: center;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 90%;
 }
 
-/* Service Rows */
 .serviceRow {
   display: flex;
-  align-items: center;
-  margin-bottom: 1.5rem;
   gap: 1.5rem;
-  width: 100%;
-  max-width: 1280px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 0.8rem;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  height: auto;
+  padding: 4rem 4rem;
+  box-sizing: border-box;
 }
 
 .imageLeft {
@@ -139,7 +141,7 @@ body {
 .serviceImage {
   flex: 1;
   max-width: 35%;
-  max-height: 35vh;
+  max-height: 40vh;
 }
 
 .serviceImage img {
@@ -152,27 +154,38 @@ body {
 
 .serviceContent {
   flex: 1;
-  padding:  Responsive 0.8rem;
+  padding: 0.8rem;
   width: 100%;
 }
 
-.serviceTitle {
-  color: #003087;
-  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
-  font-weight: 600;
-  margin-bottom: 0.3rem;
-  text-transform: uppercase;
+.serviceTitle1, .serviceTitle2, .serviceTitle3, .serviceTitle4, .serviceTitle5, .serviceTitle6, .serviceTitle7 {
+  font-size: clamp(1.5rem, 10vw, 1.3rem);
+  font-weight: 700;
+  margin-top: 8rem;
+  text-transform: initial;
   text-align: center;
 }
 
+.serviceTitle1, .serviceTitle4 {
+  color: white;
+}
+
+.serviceTitle2, .serviceTitle5, .serviceTitle7 {
+  color: #0F5179;
+}
+
+.serviceTitle3, .serviceTitle6 {
+  color: #333333;
+}
+
 /* Optional background color classes for service rows */
-.serviceRow1 { /* Generators */ }
-.serviceRow2 { /* Spare Parts */ }
-.serviceRow3 { /* Vessel Management */ }
-.serviceRow4 { /* Materials */ }
-.serviceRow5 { /* Maintenance */ }
-.serviceRow6 { /* Supply */ }
-.serviceRow7 { /* Offshore Operations */ }
+.serviceRow1 {}
+.serviceRow2 {}
+.serviceRow3 {}
+.serviceRow4 {}
+.serviceRow5 {}
+.serviceRow6 {}
+.serviceRow7 {}
 
 /* Responsive Design */
 @media (max-width: 1280px) {
@@ -185,16 +198,8 @@ body {
     padding: 0 1rem;
   }
 
-  .sectionTitle {
+  .sectionTitle, .sectionText {
     max-width: 90%;
-  }
-
-  .sectionText {
-    max-width: 90%;
-  }
-
-  .serviceRow {
-    padding: 0 1rem;
   }
 }
 
@@ -202,6 +207,7 @@ body {
   .heroSection {
     height: 45vh;
   }
+
 
   .contentContainer {
     padding: 0 0.8rem;
@@ -213,14 +219,6 @@ body {
 
   .sectionText {
     font-size: clamp(0.65rem, 1vw, 0.75rem);
-  }
-
-  .serviceRow {
-    padding: 0 0.8rem;
-  }
-
-  .serviceTitle {
-    font-size: clamp(0.8rem, 1.5vw, 1rem);
   }
 }
 
@@ -246,31 +244,43 @@ body {
     font-size: clamp(0.8rem, 2vw, 1rem);
   }
 
+
   .sectionText {
     font-size: clamp(0.6rem, 1vw, 0.7rem);
   }
 
   .serviceRow {
     flex-direction: column;
-    gap: 0.8rem;
-    padding: 0 0.5rem;
+    align-items: center;
+    padding: 2rem 1rem;
   }
 
   .serviceImage {
     max-width: 100%;
-    max-height: 30vh;
+    width: 100%;
+    max-height: 300px;
+    margin-bottom: 1rem;
   }
 
   .serviceImage img {
-    max-height: 30vh;
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 4px;
   }
 
   .serviceContent {
-    padding: 0.5rem;
+    width: 100%;
+    padding: 0 1rem;
+    margin-bottom: 8rem;
+    box-sizing: border-box;
+    text-align: center;
   }
-
-  .serviceTitle {
-    font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+  .serviceRow {
+    flex-direction: column;
+    gap: 0.5rem; /* Reduced gap for smaller screens */
+    padding: 2rem 1rem;
   }
 }
 
@@ -300,17 +310,21 @@ body {
     font-size: clamp(0.55rem, 1vw, 0.65rem);
   }
 
-  .serviceRow {
-    margin-bottom: 1rem;
-    padding: 0 0.3rem;
+  .serviceImage {
+    max-height: 250px;
   }
 
   .serviceImage img {
-    max-height: 25vh;
+    max-height: 250px;
   }
 
-  .serviceTitle {
-    font-size: clamp(0.6rem, 1.5vw, 0.8rem);
+  .serviceContent {
+    padding: 0 0.5rem;
+    margin-bottom: 8rem;
+  }
+   .serviceRow {
+    gap: 0.4rem; /* Further reduce gap for very small screens */
+    padding: 1.5 0.8rem;
   }
 }
 
@@ -340,17 +354,20 @@ body {
     font-size: clamp(0.5rem, 1vw, 0.6rem);
   }
 
-  .serviceRow {
-    margin-bottom: 0.8rem;
-    padding: 0 0.2rem;
-    gap: 0.5rem;
+  .serviceImage {
+    max-height: 200px;
   }
 
   .serviceImage img {
-    max-height: 20vh;
+    max-height: 200px;
   }
 
-  .serviceTitle {
-    font-size: clamp(0.5rem, 1.5vw, 0.7rem);
+  .serviceContent {
+    padding: 0 0.5rem;
+    margin-bottom: 8rem;
+  }
+  .serviceRow {
+    gap: 0.3rem; /* Minimal gap for ultra small screens */
+    padding: 2rem 0.5rem;
   }
 }

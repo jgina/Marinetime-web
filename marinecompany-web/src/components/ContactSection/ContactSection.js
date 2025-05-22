@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { FaMapMarkerAlt } from "react-icons/fa"; // Added import
 import styles from "./ContactSection.module.css";
 
 const ContactSection = () => {
@@ -14,13 +15,12 @@ const ContactSection = () => {
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
-    setStatus(null); // Reset status on input change
+    setStatus(null);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Basic form validation
     if (!formData.fullname || !formData.phone || !formData.email) {
       setStatus({ type: "error", message: "Please fill in all required fields." });
       return;
@@ -30,17 +30,17 @@ const ContactSection = () => {
 
     emailjs
       .send(
-        "service_pkudkz8", // Replace with your EmailJS service ID
-        "template_jli652a", // Replace with your EmailJS template ID
+        "service_pkudkz8",
+        "template_jli652a",
         formData,
-        "-L82RD_4F-6cajqXc" // Replace with your EmailJS public key
+        "-L82RD_4F-6cajqXc"
       )
       .then(
         () => {
           setStatus({ type: "success", message: "Message sent successfully!" });
           setFormData({ fullname: "", phone: "", email: "", message: "" });
         },
-        (error) => {
+        () => {
           setStatus({
             type: "error",
             message: "Failed to send message. Please try again later.",
@@ -49,7 +49,7 @@ const ContactSection = () => {
       )
       .finally(() => {
         setIsLoading(false);
-        setTimeout(() => setStatus(null), 5000); // Clear status after 5 seconds
+        setTimeout(() => setStatus(null), 5000);
       });
   };
 
@@ -61,20 +61,29 @@ const ContactSection = () => {
         <div className={styles.contactBlock}>
           <h2 className={styles.sectionTitle}>Head Office</h2>
           <address className={styles.address}>
-             Road 1, Plot 3 Odani Green City,
-             <br></br>
-           Elelenwo, Port Harcourt,
-           <br></br>
-           Rivers State, Nigeria.
-           <br></br>
-           <br></br>
-           +234 8034608291
-           <br></br>
-           +234 8056430189
+            Road 1, Plot 3 Odani Green City,
+            <br />
+            Elelenwo, Port Harcourt,
+            <br />
+            Rivers State, Nigeria.
+            <br />
+            <br />
+            +234 8034608291
+            <br />
+            +234 8056430189
           </address>
-        </div>
 
-        {/* <div className={styles.divider}></div> */}
+          {/* Google Maps Icon Link */}
+          <a
+            href="https://www.google.com/maps?q=Road+1,+Plot+3+Odani+Green+City,+Elelenwo,+Port+Harcourt,+Rivers+State,+Nigeria"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.mapLink}
+          >
+            <FaMapMarkerAlt className={styles.mapIcon} />
+            <span className={styles.mapText}>Open in Google Maps</span>
+          </a>
+        </div>
 
         <div className={styles.contactBlock1}>
           <h2 className={styles.sectionTitle}>Send Us Message</h2>
@@ -159,21 +168,6 @@ const ContactSection = () => {
         </div>
 
         <div className={styles.divider}></div>
-
-        {/* <div className={styles.contactBlock}>
-          <h3 className={styles.subsectionTitle}>Name Name</h3>
-          <ul className={styles.contactList}>
-            <li className={styles.contactItem}>
-              <strong>Address</strong>
-            </li>
-            <li className={styles.contactItem}>
-              <strong>Contact Us</strong>
-            </li>
-            <li className={styles.contactItem}>
-              <strong>Contact Us</strong>
-            </li>
-          </ul>
-        </div> */}
       </div>
     </section>
   );
