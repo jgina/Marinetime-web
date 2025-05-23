@@ -198,4 +198,11 @@
   .formGroup {
     max-width: 100%;
   }
+  .submitButton {
+    padding: 0.8rem 1.5rem;
+    width: 200px;
+     
+    
+  }
+
 }

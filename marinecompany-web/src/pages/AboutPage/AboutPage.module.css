@@ -97,6 +97,29 @@ body {
   color: #444;
 }
 
+.sendMessageBtn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background-color: #0f5178;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+.sendMessageBtn:hover {
+  background-color: #f28c38; /* Matches whyChooseUsSection accent */
+  transform: scale(1.05);
+}
+
+.sendMessageBtn:active {
+  transform: scale(0.95);
+}
+
 /* Core Values Section */
 .coreValuesSection {
   background-color: #F7FAFC;
@@ -273,5 +296,418 @@ body {
   to {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+/* Extra-large screens (e.g., large laptops > 1440px) */
+@media screen and (min-width: 1440px) {
+  .heroSection {
+    height: 70vh;
+    min-height: 600px;
+    max-height: 900px;
+  }
+
+  .heroTextContainer {
+    max-width: 1000px;
+    padding: 0 3rem;
+  }
+
+  .heroTitle {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+  }
+
+  .breadcrumb {
+    font-size: 1.3rem;
+  }
+
+  .contentSection {
+    padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 8vw, 10rem);
+  }
+
+  .sectionTitle {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+  }
+
+  .paragraph {
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  }
+
+  .sendMessageBtn {
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+  }
+
+  .coreValuesSection {
+    padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 8vw, 10rem);
+  }
+
+  .coreValuesContent {
+    padding: clamp(2rem, 5vw, 5rem);
+  }
+
+  .coreValuesHeader {
+    padding: 2.5rem;
+  }
+
+  .coreValuesTitle {
+    font-size: clamp(2rem, 5vw, 2.75rem);
+  }
+
+  .coreValuesIntro {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+  }
+
+  .valueTitle {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+  }
+
+  .whyChooseUsSection {
+    padding: clamp(3rem, 5vw, 4rem) clamp(2rem, 5vw, 3rem);
+  }
+
+  .whyChooseUsContainer {
+    gap: 3rem;
+  }
+
+  .whyText h1 {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  }
+
+  .whyText p,
+  .whyText li {
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  }
+}
+
+/* Medium laptops/MacBooks (1024px - 1440px) */
+@media screen and (max-width: 1440px) and (min-width: 1024px) {
+  .heroSection {
+    height: 55vh;
+    min-height: 450px;
+  }
+
+  .heroTextContainer {
+    max-width: 700px;
+    padding: 0 2.5rem;
+  }
+
+  .heroTitle {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+  }
+
+  .breadcrumb {
+    font-size: 1rem;
+  }
+
+  .contentSection {
+    padding: clamp(2rem, 6vw, 3.5rem) clamp(1.5rem, 8vw, 6rem);
+  }
+
+  .sectionTitle {
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
+  }
+
+  .paragraph {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+  }
+
+  .sendMessageBtn {
+    padding: 0.9rem 2.2rem;
+    font-size: 1.1rem;
+  }
+
+  .coreValuesSection {
+    padding: clamp(2rem, 6vw, 3.5rem) clamp(1.5rem, 8vw, 6rem);
+  }
+
+  .coreValuesContent {
+    padding: clamp(1.5rem, 5vw, 3rem);
+  }
+
+  .coreValuesHeader {
+    padding: 1.8rem;
+  }
+
+  .coreValuesTitle {
+    font-size: clamp(1.4rem, 5vw, 2rem);
+  }
+
+  .coreValuesIntro {
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
+  }
+
+  .valueTitle {
+    font-size: clamp(0.85rem, 2.5vw, 1rem);
+  }
+
+  .whyChooseUsSection {
+    padding: clamp(1.5rem, 5vw, 2.5rem) clamp(1rem, 5vw, 1.5rem);
+  }
+
+  .whyChooseUsContainer {
+    gap: 1.5rem;
+  }
+}
+
+/* Tablets (768px - 1023px) */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .heroSection {
+    height: 50vh;
+    min-height: 400px;
+  }
+
+  .heroTextContainer {
+    max-width: 600px;
+    padding: 0 2rem;
+  }
+
+  .heroTitle {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+
+  .breadcrumb {
+    font-size: 0.95rem;
+  }
+
+  .contentSection {
+    padding: clamp(1.5rem, 6vw, 3rem) clamp(1rem, 8vw, 4rem);
+  }
+
+  .sectionTitle {
+    font-size: clamp(1.3rem, 4vw, 1.6rem);
+  }
+
+  .paragraph {
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+  }
+
+  .sendMessageBtn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+
+  .coreValuesSection {
+    padding: clamp(1.5rem, 6vw, 3rem) clamp(1rem, 8vw, 4rem);
+  }
+
+  .coreValuesContent {
+    padding: clamp(1rem, 5vw, 2.5rem);
+  }
+
+  .coreValuesHeader {
+    padding: 1.5rem;
+  }
+
+  .coreValuesTitle {
+    font-size: clamp(1.3rem, 5vw, 1.8rem);
+  }
+
+  .coreValuesIntro {
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+  }
+
+  .valueTitle {
+    font-size: clamp(0.8rem, 2.5vw, 0.95rem);
+  }
+
+  .whyChooseUsSection {
+    padding: clamp(1.5rem, 5vw, 2rem) clamp(0.8rem, 5vw, 1.2rem);
+  }
+
+  .whyChooseUsContainer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .whyImage, .whyText {
+    flex: none;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .whyImage img {
+    max-height: 40vh;
+  }
+}
+
+/* Mobile devices (below 768px) */
+@media screen and (max-width: 767px) {
+  .heroSection {
+    height: 45vh;
+    min-height: 350px;
+    max-height: 600px;
+  }
+
+  .heroTextContainer {
+    max-width: 90%;
+    padding: 0 1.5rem;
+  }
+
+  .heroTitle {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+  }
+
+  .breadcrumb {
+    font-size: 0.9rem;
+  }
+
+  .contentSection {
+    padding: clamp(1rem, 6vw, 2rem) clamp(0.8rem, 8vw, 1.5rem);
+  }
+
+  .sectionTitle {
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+  }
+
+  .paragraph {
+    font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+    margin-bottom: 1rem;
+  }
+
+  .sendMessageBtn {
+    width: 100%; /* Full-width for mobile */
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .coreValuesSection {
+    padding: clamp(1rem, 6vw, 2rem) clamp(0.8rem, 8vw, 1.5rem);
+  }
+
+  .coreValuesContent {
+    padding: clamp(0.8rem, 5vw, 2rem);
+    margin-top: 0; /* Remove negative margin for mobile */
+  }
+
+  .coreValuesHeader {
+    padding: 1rem;
+  }
+
+  .coreValuesTitle {
+    font-size: clamp(1.2rem, 5vw, 1.6rem);
+  }
+
+  .coreValuesIntro {
+    font-size: clamp(0.75rem, 2vw, 0.85rem);
+  }
+
+  .valuesList {
+    padding: 0.5rem 1rem;
+  }
+
+  .valueTitle {
+    font-size: clamp(0.75rem, 2.5vw, 0.9rem);
+  }
+
+  .whyChooseUsSection {
+    padding: clamp(1rem, 5vw, 1.5rem) clamp(0.5rem, 5vw, 1rem);
+  }
+
+  .whyChooseUsContainer {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .whyImage, .whyText {
+    flex: none;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .whyImage img {
+    max-height: 35vh;
+  }
+
+  .whyText h1 {
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+  }
+
+  .whyText p,
+  .whyText li {
+    font-size: clamp(0.65rem, 1.5vw, 0.9rem);
+  }
+}
+
+/* Extra small mobile devices (below 480px) */
+@media screen and (max-width: 480px) {
+  .heroSection {
+    height: 40vh;
+    min-height: 300px;
+  }
+
+  .heroTextContainer {
+    max-width: 95%;
+    padding: 0 1rem;
+  }
+
+  .heroTitle {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .breadcrumb {
+    font-size: 0.85rem;
+  }
+
+  .contentSection {
+    padding: clamp(0.8rem, 6vw, 1.5rem) clamp(0.5rem, 8vw, 1rem);
+  }
+
+  .sectionTitle {
+    font-size: clamp(1.1rem, 4vw, 1.3rem);
+  }
+
+  .paragraph {
+    font-size: clamp(0.75rem, 2.5vw, 0.85rem);
+  }
+
+  .sendMessageBtn {
+    width: 100%;
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .coreValuesSection {
+    padding: clamp(0.8rem, 6vw, 1.5rem) clamp(0.5rem, 8vw, 1rem);
+  }
+
+  .coreValuesContent {
+    padding: clamp(0.5rem, 5vw, 1.5rem);
+  }
+
+  .coreValuesHeader {
+    padding: 0.8rem;
+  }
+
+  .coreValuesTitle {
+    font-size: clamp(1.1rem, 5vw, 1.4rem);
+  }
+
+  .coreValuesIntro {
+    font-size: clamp(0.7rem, 2vw, 0.8rem);
+  }
+
+  .valuesList {
+    padding: 0.5rem;
+  }
+
+  .valueTitle {
+    font-size: clamp(0.7rem, 2.5vw, 0.85rem);
+  }
+
+  .whyChooseUsSection {
+    padding: clamp(0.8rem, 5vw, 1.2rem) clamp(0.3rem, 5vw, 0.8rem);
+  }
+
+  .whyImage img {
+    max-height: 30vh;
+  }
+
+  .whyText h1 {
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
+  }
+
+  .whyText p,
+  .whyText li {
+    font-size: clamp(0.6rem, 1.5vw, 0.8rem);
   }
 }

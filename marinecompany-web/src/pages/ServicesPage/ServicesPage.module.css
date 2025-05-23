@@ -251,6 +251,7 @@ body {
 
   .serviceRow {
     flex-direction: column;
+    height: 400px;
     align-items: center;
     padding: 2rem 1rem;
   }

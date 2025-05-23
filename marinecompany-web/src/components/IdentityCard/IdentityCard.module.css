@@ -1,31 +1,138 @@
 .identitySection {
-    width: 100%;
-    height: auto;
-    padding: 4rem 8rem;
-    background-color: white;
-  
- 
+  width: 100%;
+  height: auto;
+  padding: 4rem 8rem;
+  background-color: white;
+  box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+}
+
+.heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 1.2rem;
+  line-height: 2.8rem;
+}
+
+.identity1 {
+  color: #f7931e;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 48px;
+}
+
+.description {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #333333;
+  line-height: 1.6;
+}
+
+/* Extra-large screens (e.g., large laptops, desktops > 1440px) */
+@media screen and (min-width: 1440px) {
+  .identitySection {
+      padding: 5rem 10rem; /* More padding for larger screens */
   }
-  
+
   .heading {
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: #333333;
-    margin-bottom: 1.2rem;
-    line-height: 2.8rem;
+      font-size: 2.8rem; /* Larger font for readability */
+      line-height: 3.4rem;
+      margin-bottom: 1.5rem;
   }
 
   .identity1 {
-    color: #f7931e;
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 48px;
+      font-size: 1.2rem; /* Slightly larger for emphasis */
+      margin-bottom: 3.5rem;
   }
-  
+
   .description {
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: #333333;
-    line-height: 1.6;
+      font-size: 1.3rem; /* Increased for better readability */
+      line-height: 1.8;
   }
-  
+}
+
+/* Medium laptops (1024px - 1440px) */
+@media screen and (max-width: 1440px) and (min-width: 1024px) {
+  .identitySection {
+      padding: 3.5rem 6rem; /* Adjusted padding for medium screens */
+  }
+
+  .heading {
+      font-size: 2.4rem;
+      line-height: 3rem;
+  }
+
+  .identity1 {
+      font-size: 1rem;
+      margin-bottom: 2.5rem;
+  }
+
+  .description {
+      font-size: 1.2rem;
+  }
+}
+
+/* Tablets and small laptops (768px - 1023px) */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .identitySection {
+      padding: 3rem 4rem; /* Reduced padding for smaller screens */
+  }
+
+  .heading {
+      font-size: 2rem;
+      line-height: 2.6rem;
+  }
+
+  .identity1 {
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+  }
+
+  .description {
+      font-size: 1.1rem;
+  }
+}
+
+/* Mobile devices (below 768px) */
+@media screen and (max-width: 767px) {
+  .identitySection {
+      padding: 2rem 1.5rem; /* Minimal padding for mobile */
+  }
+
+  .heading {
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+      margin-bottom: 1rem;
+  }
+
+  .identity1 {
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+  }
+
+  .description {
+      font-size: 1rem;
+      line-height: 1.5;
+  }
+}
+
+/* Extra small mobile devices (below 480px) */
+@media screen and (max-width: 480px) {
+  .identitySection {
+      padding: 1.5rem 1rem; /* Tighter padding for very small screens */
+  }
+
+  .heading {
+      font-size: 1.6rem;
+      line-height: 2rem;
+  }
+
+  .identity1 {
+      font-size: 0.85rem;
+      margin-bottom: 1.2rem;
+  }
+
+  .description {
+      font-size: 0.95rem;
+  }
+}
