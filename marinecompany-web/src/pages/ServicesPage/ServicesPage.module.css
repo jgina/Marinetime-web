@@ -85,6 +85,7 @@ body {
   width: 100%;
   margin-bottom: 4rem;
   background-color: #ffffff;
+  box-sizing: border-box; /* Added for consistent padding */
 }
 
 .contentContainer {
@@ -118,6 +119,29 @@ body {
   line-height: 1.4;
   margin-bottom: 1rem;
   width: 90%;
+}
+
+.sendMessageBtn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  font-weight: 600;
+  color: white;
+  background-color: #0f5179;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+.sendMessageBtn:hover {
+  background-color: #f28c38;
+  transform: scale(1.05);
+}
+
+.sendMessageBtn:active {
+  transform: scale(0.95);
 }
 
 .serviceRow {
@@ -193,47 +217,99 @@ body {
     max-width: 100%;
   }
 
+  .contentSection {
+    padding: 3rem 6rem;
+  }
+
   .contentContainer {
     max-width: 100%;
     padding: 0 1rem;
   }
 
-  .sectionTitle, .sectionText {
-    max-width: 90%;
+  .sectionTitle {
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+  }
+
+  .sectionText {
+    font-size: clamp(0.9rem, 1.1vw, 1.6rem);
+  }
+
+  .sendMessageBtn {
+    padding: 0.9rem 2.2rem;
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
+  }
+
+  .serviceRow {
+    padding: 3rem 3rem;
   }
 }
 
 @media (max-width: 992px) {
   .heroSection {
     height: 45vh;
+    min-height: 350px;
   }
 
+  .heroContent {
+    padding: 0 0.6rem;
+  }
+
+  .heroTitle {
+    font-size: clamp(1.4rem, 5vw, 2.2rem);
+  }
+
+  .breadcrumb {
+    font-size: clamp(0.45rem, 1vw, 0.65rem);
+  }
+
+  .contentSection {
+    padding: 2.5rem 4rem;
+  }
 
   .contentContainer {
     padding: 0 0.8rem;
   }
 
   .sectionTitle {
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    font-size: clamp(0.9rem, 2vw, 1rem);
   }
 
   .sectionText {
-    font-size: clamp(0.65rem, 1vw, 0.75rem);
+    font-size: clamp(0.8rem, 1.1vw, 1.4rem);
+  }
+
+  .sendMessageBtn {
+    padding: 0.8rem 2rem;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+  }
+
+  .serviceRow {
+    padding: 2.5rem 2rem;
   }
 }
 
 @media (max-width: 768px) {
   .heroSection {
     height: 40vh;
-    min-height: 350px;
+    min-height: 300px;
+  }
+
+  .heroContent {
+    padding: 0 0.5rem;
+    max-width: 95%;
   }
 
   .heroTitle {
-    font-size: clamp(1.5rem, 5vw, 2rem);
+    font-size: clamp(1.3rem, 5vw, 2rem);
   }
 
   .breadcrumb {
-    font-size: clamp(0.5rem, 1vw, 0.6rem);
+    font-size: clamp(0.4rem, 1vw, 0.6rem);
+  }
+
+  .contentSection {
+    padding: 2rem 1.5rem;
+    margin-bottom: 2rem;
   }
 
   .contentContainer {
@@ -241,54 +317,57 @@ body {
   }
 
   .sectionTitle {
-    font-size: clamp(0.8rem, 2vw, 1rem);
+    font-size: clamp(0.8rem, 2vw, 0.95rem);
   }
 
-
   .sectionText {
-    font-size: clamp(0.6rem, 1vw, 0.7rem);
+    font-size: clamp(0.75rem, 1.1vw, 1.2rem);
+    width: 100%;
+  }
+
+  .sendMessageBtn {
+    width: 100%; /* Full-width for small screens */
+    padding: 0.8rem 1.5rem;
+    font-size: clamp(0.75rem, 2vw, 0.85rem);
   }
 
   .serviceRow {
     flex-direction: column;
-    height: 400px;
-    align-items: center;
-    padding: 2rem 1rem;
+    gap: 0.5rem;
+    width: 100%;
+    margin-left: 0;
+    padding: 1.5rem 1rem;
+    height: auto;
   }
 
   .serviceImage {
     max-width: 100%;
-    width: 100%;
-    max-height: 300px;
-    margin-bottom: 1rem;
+    max-height: 25vh;
   }
 
   .serviceImage img {
-    width: 100%;
-    height: auto;
-    max-height: 300px;
-    object-fit: cover;
-    border-radius: 4px;
+    max-height: 25vh;
   }
 
   .serviceContent {
-    width: 100%;
-    padding: 0 1rem;
-    margin-bottom: 8rem;
-    box-sizing: border-box;
-    text-align: center;
+    padding: 0 0.8rem;
+    margin-bottom: 1rem; /* Reduced from 16rem for efficiency */
   }
-  .serviceRow {
-    flex-direction: column;
-    gap: 0.5rem; /* Reduced gap for smaller screens */
-    padding: 2rem 1rem;
+
+  .serviceTitle1, .serviceTitle2, .serviceTitle3, .serviceTitle4, .serviceTitle5, .serviceTitle6, .serviceTitle7 {
+    font-size: clamp(1.2rem, 5vw, 1.4rem);
+    margin-top: 1rem; /* Reduced from 8rem for better spacing */
   }
 }
 
 @media (max-width: 576px) {
   .heroSection {
     height: 35vh;
-    min-height: 300px;
+    min-height: 280px;
+  }
+
+  .heroContent {
+    padding: 0 0.4rem;
   }
 
   .heroTitle {
@@ -296,7 +375,12 @@ body {
   }
 
   .breadcrumb {
-    font-size: clamp(0.4rem, 1vw, 0.5rem);
+    font-size: clamp(0.35rem, 1vw, 0.55rem);
+  }
+
+  .contentSection {
+    padding: 1.5rem 1rem;
+    margin-bottom: 1.5rem;
   }
 
   .contentContainer {
@@ -304,28 +388,39 @@ body {
   }
 
   .sectionTitle {
-    font-size: clamp(0.7rem, 2vw, 0.9rem);
+    font-size: clamp(0.75rem, 2vw, 0.9rem);
   }
 
   .sectionText {
-    font-size: clamp(0.55rem, 1vw, 0.65rem);
+    font-size: clamp(0.7rem, 1.1vw, 1rem);
+  }
+
+  .sendMessageBtn {
+    width: 100%;
+    padding: 0.7rem 1.2rem;
+    font-size: clamp(0.7rem, 2vw, 0.8rem);
+  }
+
+  .serviceRow {
+    padding: 1rem 0.8rem;
+    gap: 0.4rem;
   }
 
   .serviceImage {
-    max-height: 250px;
+    max-height: 20vh;
   }
 
   .serviceImage img {
-    max-height: 250px;
+    max-height: 20vh;
   }
 
   .serviceContent {
     padding: 0 0.5rem;
-    margin-bottom: 8rem;
+    margin-bottom: 0.8rem;
   }
-   .serviceRow {
-    gap: 0.4rem; /* Further reduce gap for very small screens */
-    padding: 1.5 0.8rem;
+
+  .serviceTitle1, .serviceTitle2, .serviceTitle3, .serviceTitle4, .serviceTitle5, .serviceTitle6, .serviceTitle7 {
+    font-size: clamp(1.1rem, 5vw, 1.3rem);
   }
 }
 
@@ -335,12 +430,21 @@ body {
     min-height: 250px;
   }
 
+  .heroContent {
+    padding: 0 0.3rem;
+  }
+
   .heroTitle {
-    font-size: clamp(1rem, 5vw, 1.5rem);
+    font-size: clamp(1rem, 5vw, 1.6rem);
   }
 
   .breadcrumb {
-    font-size: clamp(0.4rem, 1vw, 0.5rem);
+    font-size: clamp(0.3rem, 1vw, 0.5rem);
+  }
+
+  .contentSection {
+    padding: 1rem 0.8rem;
+    margin-bottom: 1rem;
   }
 
   .contentContainer {
@@ -348,27 +452,102 @@ body {
   }
 
   .sectionTitle {
-    font-size: clamp(0.6rem, 2vw, 0.8rem);
+    font-size: clamp(0.7rem, 2vw, 0.85rem);
   }
 
   .sectionText {
-    font-size: clamp(0.5rem, 1vw, 0.6rem);
+    font-size: clamp(0.65rem, 1.1vw, 0.9rem);
+  }
+
+  .sendMessageBtn {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    font-size: clamp(0.65rem, 2vw, 0.75rem);
+  }
+
+  .serviceRow {
+    padding: 0.8rem 0.5rem;
+    gap: 0.3rem;
   }
 
   .serviceImage {
-    max-height: 200px;
+    max-height: 18vh;
   }
 
   .serviceImage img {
-    max-height: 200px;
+    max-height: 18vh;
   }
 
   .serviceContent {
-    padding: 0 0.5rem;
-    margin-bottom: 8rem;
+    padding: 0 0.4rem;
+    margin-bottom: 0.6rem;
   }
+
+  .serviceTitle1, .serviceTitle2, .serviceTitle3, .serviceTitle4, .serviceTitle5, .serviceTitle6, .serviceTitle7 {
+    font-size: clamp(1rem, 5vw, 1.2rem);
+  }
+}
+
+@media (max-width: 360px) {
+  .heroSection {
+    height: 25vh;
+    min-height: 220px;
+  }
+
+  .heroContent {
+    padding: 0 0.2rem;
+  }
+
+  .heroTitle {
+    font-size: clamp(0.9rem, 5vw, 1.4rem);
+  }
+
+  .breadcrumb {
+    font-size: clamp(0.25rem, 1vw, 0.45rem);
+  }
+
+  .contentSection {
+    padding: 0.8rem 0.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .contentContainer {
+    padding: 0 0.15rem;
+  }
+
+  .sectionTitle {
+    font-size: clamp(0.65rem, 2vw, 0.8rem);
+  }
+
+  .sectionText {
+    font-size: clamp(0.6rem, 1.1vw, 0.85rem);
+  }
+
+  .sendMessageBtn {
+    width: 100%;
+    padding: 0.5rem 0.8rem;
+    font-size: clamp(0.6rem, 2vw, 0.7rem);
+  }
+
   .serviceRow {
-    gap: 0.3rem; /* Minimal gap for ultra small screens */
-    padding: 2rem 0.5rem;
+    padding: 0.6rem 0.3rem;
+    gap: 0.2rem;
+  }
+
+  .serviceImage {
+    max-height: 15vh;
+  }
+
+  .serviceImage img {
+    max-height: 15vh;
+  }
+
+  .serviceContent {
+    padding: 0 0.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .serviceTitle1, .serviceTitle2, .serviceTitle3, .serviceTitle4, .serviceTitle5, .serviceTitle6, .serviceTitle7 {
+    font-size: clamp(0.9rem, 5vw, 1.1rem);
   }
 }
