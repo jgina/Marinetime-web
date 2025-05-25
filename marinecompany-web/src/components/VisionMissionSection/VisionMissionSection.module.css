@@ -5,7 +5,6 @@
   font-family: Arial, sans-serif;
 }
 
-
 .section {
   margin-bottom: 1rem; /* Reduced for compactness */
   padding: 0.5rem 0.5rem 3rem 1rem;
@@ -15,11 +14,10 @@
 
 .section2 {
   margin-bottom: 1rem; /* Reduced for compactness */
-  padding:  0.5rem 0.5rem 4rem 1rem;
+  padding: 0.5rem 0.5rem 4rem 1rem;
   max-width: 600px; /* Matches text width in image */
   margin: 0 auto;
 }
-
 
 .icon {
   font-size: 1.5rem; /* Adjusted to match image */
@@ -99,23 +97,78 @@
   border-radius: 4px; /* Slight rounding for polish */
 }
 
+/* Tablet and below */
 @media (max-width: 768px) {
+  .container {
+    padding: 2rem 1rem; /* Reduced padding for smaller screens */
+  }
+
   .section {
-    padding: 0.5rem;
+    padding: 0.5rem 1rem 2rem 1rem;
+    max-width: 90%; /* Wider on smaller screens */
   }
 
-  .heading {
-    font-size: 1rem;
+  .section2 {
+    padding: 0.5rem 1rem 3rem 1rem;
+    max-width: 90%; /* Wider on smaller screens */
   }
 
-  .text {
-    font-size: 0.7rem;
+  .headingVision,
+  .headingMission {
+    font-size: 1.3rem; /* Slightly smaller for better fit */
   }
+
+  .textvision,
+  .textmission {
+    font-size: 0.9rem; /* Adjusted for readability */
+  }
+
   .subHeading {
     font-size: 1rem; /* Reduced for mobile */
   }
 
   .partnerLogo img {
     width: 80px; /* Reduced for mobile to fit screen */
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem 0.5rem; /* Further reduced padding for mobile */
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+  }
+
+  .section {
+    max-width: 95%; /* Almost full width for mobile */
+    padding: 0.5rem 0.5rem 1.5rem 0.5rem; /* Adjusted padding */
+  }
+
+  .section2 {
+    max-width: 95%; /* Almost full width for mobile */
+    padding: 0.5rem 0.5rem 2rem 0.5rem; /* Adjusted padding */
+  }
+
+  .headingVision,
+  .headingMission {
+    font-size: 1.2rem; /* Further reduced for mobile */
+  }
+
+  .textvision,
+  .textmission {
+    font-size: 1rem; /* Smaller for mobile readability */
+  }
+
+  .partnerSection {
+    padding: 0.5rem 0; /* Reduced padding for mobile */
+  }
+
+  .partnerLogo {
+    gap: 1rem; /* Smaller gap for mobile */
+  }
+
+  .partnerLogo img {
+    width: 70px; /* Further reduced for smaller mobile screens */
   }
 }

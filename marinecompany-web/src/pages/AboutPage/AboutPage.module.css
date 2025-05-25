@@ -560,7 +560,7 @@ body {
   }
 
   .paragraph {
-    font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+    font-size: clamp(1rem, 2.5vw, 1rem);
     margin-bottom: 1rem;
   }
 
@@ -624,7 +624,7 @@ body {
 
   .whyText p,
   .whyText li {
-    font-size: clamp(0.65rem, 1.5vw, 0.9rem);
+    font-size: clamp(1rem, 2.5vw, 1rem);
   }
 }
 
@@ -657,7 +657,7 @@ body {
   }
 
   .paragraph {
-    font-size: clamp(0.75rem, 2.5vw, 0.85rem);
+    font-size: clamp(1rem, 2.5vw, 1rem);
   }
 
   .sendMessageBtn {
@@ -708,6 +708,6 @@ body {
 
   .whyText p,
   .whyText li {
-    font-size: clamp(0.6rem, 1.5vw, 0.8rem);
+    font-size: clamp(1rem, 2.5vw, 1rem);
   }
 }
