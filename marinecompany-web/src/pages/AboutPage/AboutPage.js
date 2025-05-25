@@ -53,7 +53,7 @@ const AboutPage = () => {
         <div className={styles.heroContent}>
           <div className={styles.heroTextContainer}>
             <h1 className={styles.heroTitle}>About Us</h1>
-            <div className={styles.breadcrumb}>Home > About Us</div>
+            <div className={styles.breadcrumb}>Home > <span className={styles.About} >About Us</span></div>
           </div>
         </div>
       </section>

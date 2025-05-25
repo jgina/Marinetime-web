@@ -475,15 +475,15 @@ body {
   }
 
   .whyText h1 {
-    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+    font-size: clamp(1.5rem, 2.5vw, 1.2rem);
   }
 
   .whyText p {
-    font-size: clamp(0.7rem, 1.8vw, 0.9rem);
+    font-size: clamp(1rem, 1.8vw, 0.9rem);
   }
 
   .whyText li {
-    font-size: clamp(0.65rem, 1.8vw, 0.85rem);
+    font-size: clamp(1rem, 1.8vw, 1rem);
   }
 
   .serviceCard {
